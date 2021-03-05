@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/px_14"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/textName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/px_14"
+        android:textColor="@color/yiJiuBlack"
+        android:textSize="16sp"
+        tools:text="王**" />
+
+    <ImageView
+        android:id="@+id/img1"
+        android:layout_width="@dimen/px_13"
+        android:layout_height="@dimen/px_13"
+        android:layout_alignTop="@+id/textName"
+        android:layout_alignBottom="@+id/textName"
+        android:layout_marginStart="@dimen/px_10"
+        android:layout_toEndOf="@+id/textName"
+        android:src="@drawable/bad_star" />
+
+    <ImageView
+        android:id="@+id/img2"
+        android:layout_width="@dimen/px_13"
+        android:layout_height="@dimen/px_13"
+        android:layout_alignTop="@+id/textName"
+        android:layout_alignBottom="@+id/textName"
+        android:layout_toEndOf="@+id/img1"
+        android:src="@drawable/bad_star" />
+
+
+    <ImageView
+        android:id="@+id/img3"
+        android:layout_width="@dimen/px_13"
+        android:layout_height="@dimen/px_13"
+        android:layout_alignTop="@+id/textName"
+        android:layout_alignBottom="@+id/textName"
+        android:layout_toEndOf="@+id/img2"
+        android:src="@drawable/bad_star" />
+
+
+    <ImageView
+        android:id="@+id/img4"
+        android:layout_width="@dimen/px_13"
+        android:layout_height="@dimen/px_13"
+        android:layout_alignTop="@+id/textName"
+        android:layout_alignBottom="@+id/textName"
+        android:layout_toEndOf="@+id/img3"
+        android:src="@drawable/bad_star" />
+
+
+    <ImageView
+        android:id="@+id/img5"
+        android:layout_width="@dimen/px_13"
+        android:layout_height="@dimen/px_13"
+        android:layout_alignTop="@+id/textName"
+        android:layout_alignBottom="@+id/textName"
+        android:layout_toEndOf="@+id/img4"
+        android:src="@drawable/bad_star" />
+
+
+    <TextView
+        android:id="@+id/textTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/px_14"
+        android:textColor="#B9B9B9"
+        android:textSize="13sp"
+        tools:text="2020-11-10" />
+
+    <TextView
+        android:id="@+id/textContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textName"
+        android:layout_alignStart="@+id/textName"
+        android:layout_marginTop="@dimen/px_10"
+        android:layout_marginEnd="@dimen/px_14"
+        android:textColor="@color/baSiGrey"
+        android:textSize="14sp"
+        tools:text="非常非常感谢董医生！医生人很好，很有耐心的给我 讲解病情，给我开方，谢谢董医生，我会按照医嘱好 好吃药，希望所有人都健健康康～～" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/textContent"
+        android:layout_marginTop="@dimen/px_14"
+        android:background="@color/line_grey" />
+</RelativeLayout>

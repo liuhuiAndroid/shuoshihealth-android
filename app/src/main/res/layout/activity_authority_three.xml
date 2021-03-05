@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <com.ssh.shuoshi.view.title.UniteTitle
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_42"
+        app:titleText="资质认证" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px_24"
+        android:layout_marginBottom="@dimen/px_19"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="@dimen/px_240"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/image1"
+                android:layout_width="@dimen/px_16"
+                android:layout_height="@dimen/px_16"
+                android:src="@drawable/orange_circle" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/orange" />
+
+            <ImageView
+                android:id="@+id/image2"
+                android:layout_width="@dimen/px_16"
+                android:layout_height="@dimen/px_16"
+                android:src="@drawable/orange_circle" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/orange" />
+
+            <ImageView
+                android:id="@+id/image3"
+                android:layout_width="@dimen/px_16"
+                android:layout_height="@dimen/px_16"
+                android:src="@drawable/orange_circle" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/px_294"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/px_8"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="1.基本信息"
+                android:textColor="@color/yiJiuBlack"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2.执照信息"
+                android:textColor="@color/yiJiuBlack"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="3.提交审核"
+                android:textColor="@color/orange"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_10"
+        android:background="@color/fQi_grey" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/px_44"
+            android:layout_height="@dimen/px_44"
+            android:layout_marginTop="@dimen/px_67"
+            android:src="@drawable/auth_three" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_19"
+            android:text="提交审核成功"
+            android:textColor="@color/yiJiuBlack"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_10"
+            android:text="您已成功提交审核，3~5个工作日查看"
+            android:textColor="@color/baSiGrey"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/px_22"
+        android:layout_marginTop="@dimen/px_14"
+        android:layout_marginEnd="@dimen/px_22"
+        android:layout_marginBottom="@dimen/px_14"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_next"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_44"
+            android:background="@drawable/bg_btn_save_origin"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+</LinearLayout>

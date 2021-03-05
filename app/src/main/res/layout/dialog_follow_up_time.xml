@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent_half"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/px_24"
+        android:layout_marginEnd="@dimen/px_24"
+        android:layout_centerVertical="true"
+        android:background="@drawable/all_round_dialog"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_14"
+            android:layout_marginBottom="@dimen/px_29"
+            android:gravity="center"
+            android:text="随访时间设置"
+            android:textColor="@color/yiJiuBlack"
+            android:textSize="16sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/px_14"
+            android:layout_marginEnd="@dimen/px_14"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="患者"
+                android:textColor="@color/black"
+                android:textSize="@dimen/px_15" />
+
+            <TextView
+                android:id="@+id/info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/px_15"
+                tools:text="患者信息" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/px_14"
+            android:layout_marginTop="@dimen/px_14"
+            android:layout_marginEnd="@dimen/px_14">
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/et_number"
+                android:layout_alignBottom="@+id/et_number"
+                android:gravity="center"
+                android:text="下次随访"
+                android:textColor="@color/yiJiuBlack"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/et_number"
+                android:layout_width="@dimen/px_162"
+                android:layout_height="@dimen/px_42"
+                android:layout_marginStart="@dimen/px_15"
+                android:layout_marginEnd="@dimen/px_15"
+                android:layout_toStartOf="@+id/tv_num"
+                android:layout_toEndOf="@+id/tv_price"
+                android:background="@color/fQi_grey"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="2"
+                android:textColorHint="@color/bA_grey"
+                android:textCursorDrawable="@drawable/my_cursor" />
+
+            <TextView
+                android:id="@+id/tv_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/et_number"
+                android:layout_alignBottom="@+id/et_number"
+                android:layout_alignParentEnd="true"
+                android:gravity="center"
+                android:text="天后"
+                android:textColor="@color/yiJiuBlack"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/px_14"
+            android:layout_marginTop="@dimen/px_14"
+            android:layout_marginEnd="@dimen/px_16"
+            android:background="@null"
+            android:text="提示：随访天数建议增加2-3天发货物流时间"
+            android:textColor="@color/jiuJiuBlack"
+            android:textSize="14sp" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="@dimen/px_14"
+            android:background="@color/fO_grey" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_52"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_cancel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="@color/baSiGrey"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/fO_grey" />
+
+            <TextView
+                android:id="@+id/tv_confirm"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="发送给患者"
+                android:textColor="@color/orange"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/px_15"
+        android:layout_marginTop="@dimen/px_14"
+        android:text="名称"
+        android:textColor="#848484"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/px_59"
+        android:layout_marginTop="@dimen/px_14"
+        android:textColor="#191919"
+        android:textSize="14sp"
+        tools:text="常用处方 1" />
+
+    <TextView
+        android:id="@+id/textView02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/px_15"
+        android:layout_marginTop="@dimen/px_39"
+        android:text="内容"
+        android:textColor="#848484"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView02"
+        android:layout_marginStart="@dimen/px_59"
+        android:layout_marginEnd="@dimen/px_15"
+        android:ellipsize="end"
+        android:textColor="#191919"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/buttonDelete"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="@dimen/px_78"
+        android:layout_height="@dimen/px_32"
+        android:layout_below="@+id/tv_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/px_12"
+        android:layout_marginEnd="@dimen/px_12"
+        android:background="@drawable/bg_btn_delete"
+        android:text="删除"
+        android:textColor="#666666" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/buttonDelete"
+        android:background="@color/line_grey" />
+
+</RelativeLayout>

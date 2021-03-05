@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="statefulLayoutImageColor">#f95047</color>
+    <color name="bg_orange">#1AFF824D</color>
+    <color name="transparent_half">#99000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="black">#000000</color>
+    <color name="hintGrey">#C6C6C6</color>
+    <color name="eLiuGrey">#E6E6E6</color>
+    <color name="yiJiuBlack">#191919</color>
+    <color name="sanSanBlack">#333333</color>
+    <color name="baSiGrey">#848484</color>
+    <color name="jiuJiuBlack">#999999</color>
+    <color name="orange">#FF824D</color>
+    <color name="white">#FFFFFF</color>
+    <color name="green_bg">#BFD6FA</color>
+    <color name="line_grey">#F0F0F0</color>
+    <color name="line_grey1">#eeeeee</color>
+    <color name="cc_grey">#CCCCCC</color>
+    <color name="fQi_grey">#F7F7F7</color>
+    <color name="cQi_grey">#C7C7C7</color>
+    <color name="fO_grey">#F0F0F0</color>
+    <color name="sand_grey">#3D3936</color>
+    <color name="sanba_grey">#383838</color>
+    <color name="liuLiu_grey">#666666</color>
+    <color name="jiuD_grey">#9D9A9D</color>
+    <color name="bA_grey">#BABABA</color>
+    <color name="dBa_grey">#D8D8D8</color>
+    <color name="fWu_grey">#F5F5F5</color>
+    <color name="fEr_grey">#F2F2F2</color>
+    <color name="bJiu_grey">#B9B9B9</color>
+
+    <color name="pickerview_timebtn_nor">#057dff</color>
+    <color name="pickerview_timebtn_pre">#c2daf5</color>
+    <color name="pickerview_bg_topbar">#f5f5f5</color>
+
+    <color name="pickerview_topbar_title">#000000</color>
+    <color name="pickerview_wheelview_textcolor_out">#a8a8a8</color>
+    <color name="pickerview_wheelview_textcolor_center">#2a2a2a</color>
+    <color name="pickerview_wheelview_textcolor_divider">#d5d5d5</color>
+    <color name="pickerview_bgColor_overlay">#60000000</color>
+    <color name="pickerview_bgColor_default">#FFFFFFFF</color>
+
+    <color name="fB_grey">#FBFBFB</color>
+    <color name="transparent_40">#80000000</color>
+
+
+    <color name="trtccalling_color_btn_enable">#FF0062E3</color>
+    <color name="trtccalling_color_btn_disable">#FF08326B</color>
+    <color name="trtccalling_color_text_tips">#FF6B82A8</color>
+    <color name="trtccalling_color_primary">#FF016EFF</color>
+    <color name="trtccalling_text_second">#FF737373</color>
+    <color name="trtccalling_color_white">#FFFFFFFF</color>
+    <color name="trtccalling_color_shade">#33000000</color>
+    <color name="trtccalling_color_background">#FF444444</color>
+    <color name="trtccalling_color_bg_cl_search">#FF092650</color>
+    <color name="ttrtccalling_color_bg_gradient_start">#FF050C17</color>
+    <color name="trtccalling_color_bg_gradient_end">#FF13294B</color>
+    <color name="trtccalling_color_edit_hint">#FF6B82A8</color>
+    <color name="trtccalling_color_head_background">#FF555555</color>
+
+    <color name="textSecond">#737373</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorShade">#33000000</color>
+    <color name="login_button_bg">#00A66b</color>
+    <color name="login_color_blue">#FF006EFD</color>
+    <color name="login_color_bg_gradient_start">#FF050C17</color>
+    <color name="login_color_bg_gradient_end">#FF13294B</color>
+    <color name="login_color_edit_hint">#FF6B82A8</color>
+    <color name="login_color_btn_enable">#FF0062E3</color>
+    <color name="login_color_btn_disable">#FF092650</color>
+    <color name="login_color_head_login_success">#FF11323E</color>
+    <color name="login_color_head_login_fail">#FF3E2A3E</color>
+    <color name="login_color_text_login_success">#FF42BC56</color>
+    <color name="login_color_text_login_fail">#FFE84B40</color>
+    <color name="login_transparent">#00000000</color>
+</resources>

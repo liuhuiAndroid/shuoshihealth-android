@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F7F7"
+    android:orientation="vertical">
+
+    <com.ssh.shuoshi.view.title.UniteTitle
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_42"
+        app:titleText="设置" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/line_grey" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_22"
+            android:layout_marginStart="@dimen/px_15"
+            android:layout_marginTop="@dimen/px_17"
+            android:layout_marginEnd="@dimen/px_15"
+            android:layout_marginBottom="@dimen/px_17">
+
+            <TextView
+                android:id="@+id/tv_tu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="手机号码"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_tu"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@+id/tv_tu">
+
+                <TextView
+                    android:id="@+id/tv_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/px_5"
+                    android:layout_toStartOf="@+id/img_phone"
+                    android:textColor="@color/jiuJiuBlack"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/img_phone"
+                    android:layout_width="@dimen/px_6"
+                    android:layout_height="@dimen/px_12"
+                    android:layout_alignTop="@+id/tv_phone"
+                    android:layout_alignBottom="@+id/tv_phone"
+                    android:layout_marginTop="@dimen/px_2"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/arrow_right" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/line_grey"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_22"
+            android:layout_marginStart="@dimen/px_15"
+            android:layout_marginTop="@dimen/px_17"
+            android:layout_marginEnd="@dimen/px_15"
+            android:layout_marginBottom="@dimen/px_17"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="正文字号"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@+id/tv_text">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/px_10"
+                    android:layout_marginEnd="@dimen/px_5"
+                    android:layout_toStartOf="@+id/tv_font"
+                    android:text="正常"
+                    android:textColor="@color/jiuJiuBlack"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/tv_font"
+                    android:layout_width="@dimen/px_6"
+                    android:layout_height="@dimen/px_12"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/arrow_right" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/line_grey" />
+
+        <RelativeLayout
+            android:id="@+id/rl_about"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_22"
+            android:layout_marginStart="@dimen/px_15"
+            android:layout_marginTop="@dimen/px_17"
+            android:layout_marginEnd="@dimen/px_15"
+            android:layout_marginBottom="@dimen/px_17">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="关于"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/img_about"
+                android:layout_width="@dimen/px_6"
+                android:layout_height="@dimen/px_12"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/arrow_right" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_10"
+        android:background="@color/fQi_grey" />
+
+    <TextView
+        android:id="@+id/btn_exit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_55"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="退出登录"
+        android:textColor="@color/orange"
+        android:textSize="15sp" />
+
+</LinearLayout>

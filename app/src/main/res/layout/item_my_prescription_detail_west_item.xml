@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/px_10">
+
+    <TextView
+        android:id="@+id/textName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="#191919"
+        android:textSize="14sp"
+        tools:text="硒酵母片(50ug*50片)" />
+
+    <TextView
+        android:id="@+id/textSpec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:layout_toStartOf="@+id/textSize"
+        android:layout_toEndOf="@+id/textName"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="#191919"
+        android:textSize="15sp"
+        tools:text="三大数据库来得及sad了三大数据库来得及sad了" />
+
+    <TextView
+        android:id="@+id/textSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:textColor="#191919"
+        android:textSize="14sp"
+        tools:text="X2" />
+
+    <TextView
+        android:id="@+id/textSpecification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textName"
+        android:layout_marginTop="@dimen/px_8"
+        android:layout_marginEnd="@dimen/px_14"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/baSiGrey"
+        android:textSize="14sp"
+        tools:text="用法用量：口服，每次100ug，每天2次" />
+
+</RelativeLayout>

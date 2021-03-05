@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mContainer"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/px_122"
+    android:layout_marginBottom="@dimen/px_10"
+    android:background="@drawable/all_white_round">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/px_15"
+        android:layout_marginTop="@dimen/px_14"
+        android:text="模版名称"
+        android:textColor="#848484"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/textView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/px_87"
+        android:layout_marginTop="@dimen/px_14"
+        android:textColor="#191919"
+        android:textSize="15sp"
+        tools:text="初步诊断" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/px_14"
+        android:layout_marginTop="@dimen/px_39"
+        android:text="Rp."
+        android:textColor="#848484"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/textView02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/px_87"
+        android:layout_marginTop="@dimen/px_39"
+        android:layout_toStartOf="@+id/img_right"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="#191919"
+        android:textSize="15sp"
+        tools:text="初步诊断" />
+
+    <ImageView
+        android:id="@+id/img_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView01"
+        android:layout_alignBottom="@+id/textView02"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="15dp"
+        android:src="@drawable/arrow_right" />
+
+    <Button
+        android:id="@+id/buttonUse"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="@dimen/px_81"
+        android:layout_height="@dimen/px_32"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/px_14"
+        android:background="@drawable/bg_btn_save_origin"
+        android:text="使用处方"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp" />
+
+</RelativeLayout>

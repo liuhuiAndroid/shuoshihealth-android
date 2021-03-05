@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <com.ssh.shuoshi.view.title.UniteTitle
+        android:id="@+id/uniteTitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_42"
+        app:titleText="选择认证方式" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/px_19"
+            android:layout_marginTop="@dimen/px_38"
+            android:layout_marginEnd="@dimen/px_15"
+            android:text="通过以下其中一种方式认证即可"
+            android:textColor="#191919"
+            android:textSize="15sp" />
+
+        <RelativeLayout
+            android:id="@+id/verifiedByPhone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_166"
+            android:layout_marginLeft="@dimen/px_19"
+            android:layout_marginTop="@dimen/px_15"
+            android:layout_marginRight="@dimen/px_14"
+            android:background="@drawable/bg_verified_choose_origin">
+
+            <ImageView
+                android:id="@+id/imageViewPhone"
+                android:layout_width="@dimen/px_48"
+                android:layout_height="@dimen/px_48"
+                android:layout_marginStart="@dimen/px_16"
+                android:layout_marginTop="@dimen/px_14"
+                android:scaleType="fitXY"
+                android:src="@drawable/verified_choose_by_phone" />
+
+            <TextView
+                android:id="@+id/textViewPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/imageViewPhone"
+                android:layout_marginStart="@dimen/px_14"
+                android:layout_toEndOf="@id/imageViewPhone"
+                android:text="手机认证"
+                android:textColor="#191919"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewPhoneDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewPhone"
+                android:layout_alignLeft="@id/textViewPhone"
+                android:layout_marginTop="@dimen/px_10"
+                android:layout_marginRight="@dimen/px_18"
+                android:text="使用该服务，表示您授权并同意查询 如下信息："
+                android:textColor="#191919"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textViewPhoneDetail01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewPhoneDetail"
+                android:layout_alignLeft="@id/textViewPhone"
+                android:layout_marginTop="@dimen/px_5"
+                android:layout_marginEnd="@dimen/px_15"
+                android:text="网络运营商注册手机号"
+                android:textColor="#999999"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textViewPhoneDetail2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewPhoneDetail01"
+                android:layout_alignLeft="@id/textViewPhone"
+                android:layout_marginRight="@dimen/px_15"
+                android:text="提供您的身份信息"
+                android:textColor="#999999"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/imagePhoneTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/verified_choose_tag" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/verifiedByFace"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_166"
+            android:layout_marginLeft="@dimen/px_19"
+            android:layout_marginTop="@dimen/px_14"
+            android:layout_marginRight="@dimen/px_14"
+            android:background="@drawable/bg_verified_choose_grey">
+
+            <ImageView
+                android:id="@+id/imageViewFace"
+                android:layout_width="@dimen/px_48"
+                android:layout_height="@dimen/px_48"
+                android:layout_marginStart="@dimen/px_16"
+                android:layout_marginTop="@dimen/px_14"
+                android:scaleType="fitXY"
+                android:src="@drawable/verified_choose_by_face" />
+
+            <TextView
+                android:id="@+id/textViewFace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/imageViewFace"
+                android:layout_marginStart="@dimen/px_14"
+                android:layout_marginRight="@dimen/px_15"
+                android:layout_toRightOf="@id/imageViewFace"
+                android:text="人脸识别"
+                android:textColor="#191919"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewFaceDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewFace"
+                android:layout_alignLeft="@id/textViewFace"
+                android:layout_marginTop="@dimen/px_10"
+                android:layout_marginRight="@dimen/px_18"
+                android:text="使用该服务，表示您授权并同意查询 如下信息："
+                android:textColor="#191919"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textViewFaceDetail01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewFaceDetail"
+                android:layout_alignLeft="@id/textViewFace"
+                android:layout_marginTop="@dimen/px_5"
+                android:layout_marginRight="@dimen/px_15"
+                android:text="查询您的人脸照片"
+                android:textColor="#999999"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textViewFaceDetail02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewFaceDetail01"
+                android:layout_alignLeft="@id/textViewFace"
+                android:layout_marginRight="@dimen/px_15"
+                android:text="提供您的身份信息及录制的视频截图"
+                android:textColor="#999999"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/imageFaceTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/verified_choose_tag"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonSubmit"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/bg_btn_save_origin"
+        android:text="下一步"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp" />
+
+</LinearLayout>

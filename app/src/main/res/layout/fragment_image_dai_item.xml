@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/px_14"
+    android:layout_marginTop="@dimen/px_10"
+    android:layout_marginEnd="@dimen/px_14"
+    android:background="@color/white">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_header"
+        android:layout_width="@dimen/px_48"
+        android:layout_height="@dimen/px_48"
+        android:layout_marginStart="@dimen/px_14"
+        android:layout_marginTop="@dimen/px_16"
+        android:scaleType="centerCrop"
+        android:src="@drawable/default_head" />
+
+    <TextView
+        android:id="@+id/tv_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/px_48"
+        android:layout_marginTop="@dimen/px_10"
+        android:background="@drawable/text_circle"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/iv_header"
+        android:layout_marginStart="@dimen/px_9"
+        android:layout_toEndOf="@+id/iv_header"
+        android:maxLength="5"
+        android:text="张三"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_sex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tv_name"
+        android:layout_alignBottom="@id/tv_name"
+        android:layout_marginStart="@dimen/px_9"
+        android:layout_toEndOf="@+id/tv_name"
+        android:gravity="center"
+        android:text="女"
+        android:textColor="@color/sanSanBlack"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tv_name"
+        android:layout_alignBottom="@id/tv_name"
+        android:layout_marginStart="@dimen/px_4"
+        android:layout_toEndOf="@+id/tv_sex"
+        android:gravity="center"
+        android:text="40岁"
+        android:textColor="@color/sanSanBlack"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tv_name"
+        android:layout_alignBottom="@+id/tv_name"
+        android:layout_marginStart="@dimen/px_5"
+        android:layout_toEndOf="@+id/tv_age"
+        android:background="@drawable/all_orange_round"
+        android:gravity="center"
+        android:paddingStart="@dimen/px_4"
+        android:paddingEnd="@dimen/px_4"
+        android:text="图文问诊"
+        android:textColor="@color/orange"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tv_name"
+        android:layout_alignBottom="@+id/tv_name"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/px_12"
+        android:gravity="center"
+        android:textColor="@color/jiuJiuBlack"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_describe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_name"
+        android:layout_alignLeft="@+id/tv_name"
+        android:layout_marginTop="@dimen/px_6"
+        android:layout_marginEnd="@dimen/px_12"
+        android:layout_toEndOf="@+id/tv_age"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="病情描述病情描病情描述病情描述病情描病情描述病情描述病情描病情描述"
+        android:textColor="@color/baSiGrey"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_subscribe_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_describe"
+        android:layout_alignLeft="@+id/tv_name"
+        android:layout_marginTop="@dimen/px_8"
+        android:layout_marginEnd="@dimen/px_13"
+        android:layout_marginBottom="@dimen/px_13"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/yiJiuBlack"
+        android:textSize="13sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_describe"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/px_8"
+        android:layout_marginEnd="@dimen/px_12"
+        android:layout_marginBottom="@dimen/px_13"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/jiuJiuBlack"
+        android:textSize="13sp" />
+
+</RelativeLayout>

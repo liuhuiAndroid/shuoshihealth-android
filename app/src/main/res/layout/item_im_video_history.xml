@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayoutContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:paddingLeft="12.6dp"
+    android:paddingRight="12.6dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/left_user_icon_view"
+        android:layout_width="41dp"
+        android:layout_height="41dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="6.23dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/im_default_user_icon"
+        android:visibility="invisible" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/right_user_icon_view"
+        android:layout_width="41dp"
+        android:layout_height="41dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="6.23dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/im_default_user_icon"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/textName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/px_5"
+        android:layout_toEndOf="@+id/left_user_icon_view"
+        android:textColor="@color/liuLiu_grey"
+        android:textSize="12sp"
+        tools:text="患者李元芳" />
+
+    <LinearLayout
+        android:id="@+id/msg_content_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textName"
+        android:layout_toLeftOf="@+id/right_user_icon_view"
+        android:layout_toRightOf="@+id/left_user_icon_view"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/linearContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/px_47"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/px_13"
+                    android:src="@drawable/ic_video_01" />
+
+                <TextView
+                    android:id="@+id/tv_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/px_8"
+                    android:layout_marginEnd="@dimen/px_15"
+                    android:textColor="#FF191919"
+                    android:textSize="15sp"
+                    tools:text="视频聊天时长 22:26" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

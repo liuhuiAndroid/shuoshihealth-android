@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <com.ssh.shuoshi.view.title.UniteTitle
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_42"
+        app:titleText="创建专家团队" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_17"
+                android:layout_marginBottom="@dimen/px_17">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/px_15"
+                    android:text="团队名称"
+                    android:textColor="@color/yiJiuBlack"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/editName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/px_68"
+                    android:layout_marginEnd="@dimen/px_14"
+                    android:background="@null"
+                    android:gravity="right"
+                    android:hint="请输入"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:textColor="@color/yiJiuBlack"
+                    android:textColorHint="@color/jiuJiuBlack"
+                    android:textCursorDrawable="@drawable/my_cursor"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/line_grey" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_17"
+                android:layout_marginBottom="@dimen/px_17">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/px_15"
+                    android:text="团队介绍"
+                    android:textColor="@color/yiJiuBlack"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/editIntroduce"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/px_110"
+                    android:layout_marginEnd="@dimen/px_14"
+                    android:background="@null"
+                    android:drawableEnd="@mipmap/right_arrow"
+                    android:drawablePadding="@dimen/px_5"
+                    android:ellipsize="end"
+                    android:gravity="right"
+                    android:hint="请输入"
+                    android:maxLines="1"
+                    android:textColor="@color/yiJiuBlack"
+                    android:textColorHint="@color/jiuJiuBlack"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/line_grey" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/px_14"
+                android:background="@color/white"
+                android:paddingStart="@dimen/px_14"
+                android:paddingEnd="@dimen/px_14">
+
+                <TextView
+                    android:id="@+id/text3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px_17"
+                    android:text="团队领衔专家"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/ImageDoctorAvatar"
+                    android:layout_width="@dimen/px_48"
+                    android:layout_height="@dimen/px_48"
+                    android:layout_below="@+id/text3"
+                    android:layout_marginTop="@dimen/px_14"
+                    android:src="@drawable/default_img" />
+
+                <TextView
+                    android:id="@+id/textName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ImageDoctorAvatar"
+                    android:layout_alignStart="@+id/ImageDoctorAvatar"
+                    android:layout_alignEnd="@+id/ImageDoctorAvatar"
+                    android:layout_marginTop="@dimen/px_5"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    tools:text="张三" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/line_grey" />
+
+            <TextView
+                android:id="@+id/text4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/px_14"
+                android:layout_marginTop="@dimen/px_14"
+                android:text="团队其他成员"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/px_14"
+                android:layout_marginEnd="@dimen/px_14"
+                android:overScrollMode="never"
+                android:scrollbars="none"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/px_22"
+        android:layout_marginTop="@dimen/px_14"
+        android:layout_marginEnd="@dimen/px_22"
+        android:layout_marginBottom="@dimen/px_14"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_save"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_44"
+            android:background="@drawable/bg_btn_save_origin"
+            android:text="保存"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fQi_grey"
+    android:orientation="vertical">
+
+    <com.ssh.shuoshi.view.title.UniteTitle
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_42"
+        android:background="@color/white"
+        app:titleText="添加患者" />
+
+    <RelativeLayout
+        android:id="@+id/rlALl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/px_14"
+        android:layout_marginTop="@dimen/px_53"
+        android:layout_marginEnd="@dimen/px_14"
+        android:background="@drawable/all_white_round">
+
+        <ImageView
+            android:id="@+id/imgHead"
+            android:layout_width="@dimen/px_72"
+            android:layout_height="@dimen/px_72"
+            android:layout_marginStart="@dimen/px_24"
+            android:layout_marginTop="@dimen/px_24"
+            android:src="@drawable/default_img" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/imgHead"
+            android:layout_alignBottom="@+id/imgHead"
+            android:layout_toEndOf="@+id/imgHead"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/textName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/px_14"
+                android:textColor="@color/black"
+                android:textSize="@dimen/px_17"
+                tools:text="王医生" />
+
+            <TextView
+                android:id="@+id/textJob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/textName"
+                android:layout_alignBottom="@+id/textName"
+                android:layout_marginStart="@dimen/px_10"
+                android:layout_toEndOf="@+id/textName"
+                android:gravity="center"
+                android:textColor="@color/sanSanBlack"
+                android:textSize="@dimen/px_14"
+                tools:text="主任医师" />
+
+            <TextView
+                android:id="@+id/textAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textName"
+                android:layout_alignStart="@+id/textName"
+                android:layout_marginTop="@dimen/px_5"
+                android:textColor="@color/baSiGrey"
+                android:textSize="@dimen/px_14"
+                tools:text="上海市 XXXXXXXX 医院" />
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/imgCode"
+            android:layout_width="@dimen/px_269"
+            android:layout_height="@dimen/px_269"
+            android:layout_below="@+id/imgHead"
+            android:layout_alignStart="@+id/imgHead"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgCode"
+            android:layout_marginTop="@dimen/px_2"
+            android:layout_marginBottom="@dimen/px_24"
+            android:gravity="center"
+            android:text="欢迎关注我的工作室"
+            android:textColor="@color/baSiGrey"
+            android:textSize="@dimen/px_14" />
+
+    </RelativeLayout>
+
+</LinearLayout>

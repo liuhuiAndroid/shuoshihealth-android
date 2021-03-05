@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/px_10"
+    android:background="@drawable/all_white_round">
+
+    <TextView
+        android:id="@+id/textName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/px_14"
+        android:layout_marginTop="@dimen/px_12"
+        android:textColor="@color/yiJiuBlack"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:text="张三" />
+
+    <TextView
+        android:id="@+id/textSex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textName"
+        android:layout_alignBottom="@+id/textName"
+        android:layout_marginStart="@dimen/px_14"
+        android:layout_toEndOf="@+id/textName"
+        android:gravity="center"
+        android:textColor="@color/baSiGrey"
+        android:textSize="14sp"
+        tools:text="女" />
+
+    <TextView
+        android:id="@+id/textAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textName"
+        android:layout_alignBottom="@+id/textName"
+        android:layout_marginStart="@dimen/px_7"
+        android:layout_toEndOf="@+id/textSex"
+        android:gravity="center"
+        android:textColor="@color/baSiGrey"
+        android:textSize="14sp"
+        tools:text="40岁" />
+
+    <TextView
+        android:id="@+id/textResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textName"
+        android:layout_marginStart="@dimen/px_14"
+        android:layout_marginTop="@dimen/px_10"
+        android:layout_toStartOf="@+id/img_right"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="#191919"
+        android:textSize="15sp"
+        tools:text="初步诊断：XXXXXXXXXX" />
+
+    <TextView
+        android:id="@+id/textAdvice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textResult"
+        android:layout_marginStart="@dimen/px_14"
+        android:layout_marginTop="@dimen/px_10"
+        android:layout_toStartOf="@+id/img_right"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="#191919"
+        android:textSize="15sp"
+        tools:text="建议用药：安神补脑片，安神补脑丸" />
+
+    <ImageView
+        android:id="@+id/img_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textName"
+        android:layout_alignBottom="@+id/textResult"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/px_14"
+        android:src="@drawable/arrow_right" />
+
+    <TextView
+        android:id="@+id/textState"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/px_29"
+        android:layout_below="@+id/textAdvice"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/px_12"
+        android:layout_marginEnd="@dimen/px_12"
+        android:layout_marginBottom="@dimen/px_14"
+        android:gravity="center"
+        android:text="待支付"
+        android:textColor="#666666" />
+
+</RelativeLayout>

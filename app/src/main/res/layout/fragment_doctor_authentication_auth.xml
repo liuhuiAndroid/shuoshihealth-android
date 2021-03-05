@@ -1,0 +1,226 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollViewBasic"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/px_14"
+        android:layout_marginEnd="@dimen/px_14"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_19"
+            android:text="上传身份证正反面照片"
+            android:textColor="@color/yiJiuBlack"
+            android:textSize="16sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_178"
+            android:layout_marginTop="@dimen/px_14"
+            android:background="@drawable/round_grey"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/img_idf"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/tv_idf_upload"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_47"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/round_half_black"
+                android:gravity="center"
+                android:text="重新上传"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_178"
+            android:layout_marginTop="@dimen/px_5"
+            android:background="@drawable/round_grey"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/img_idb"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/tv_idb_upload"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_47"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/round_half_black"
+                android:gravity="center"
+                android:text="重新上传"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_24"
+            android:text="上传医师执业证书"
+            android:textColor="@color/yiJiuBlack"
+            android:textSize="16sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_178"
+            android:layout_marginTop="@dimen/px_14"
+            android:background="@drawable/round_grey">
+
+            <ImageView
+                android:id="@+id/img_doctorP"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/tv_doctorP_upload"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_47"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/round_half_black"
+                android:gravity="center"
+                android:text="重新上传"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/imageDoctorP"
+                android:layout_width="@dimen/px_43"
+                android:layout_height="@dimen/px_43"
+                android:src="@drawable/example" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_24"
+            android:text="上传医师资格证书"
+            android:textColor="@color/yiJiuBlack"
+            android:textSize="16sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_178"
+            android:layout_marginTop="@dimen/px_14"
+            android:background="@drawable/round_grey">
+
+            <ImageView
+                android:id="@+id/img_doctorZ"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/tv_doctorZ_upload"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_47"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/round_half_black"
+                android:gravity="center"
+                android:text="重新上传"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/imageDoctorZ"
+                android:layout_width="@dimen/px_43"
+                android:layout_height="@dimen/px_43"
+                android:src="@drawable/example" />
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_24"
+            android:text="上传职称证书"
+            android:textColor="@color/yiJiuBlack"
+            android:textSize="16sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_178"
+            android:layout_marginTop="@dimen/px_14"
+            android:background="@drawable/round_grey">
+
+            <ImageView
+                android:id="@+id/img_doctorT"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:id="@+id/img_add_doctorT"
+                android:layout_width="@dimen/px_58"
+                android:layout_height="@dimen/px_58"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/px_36"
+                android:src="@drawable/bg_camera" />
+
+            <TextView
+                android:id="@+id/tv_hint_doctorT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/px_100"
+                android:text="上传职称证书"
+                android:textColor="@color/yiJiuBlack"
+                android:textSize="@dimen/px_13" />
+
+            <TextView
+                android:id="@+id/tv_doctorT_upload"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_47"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/round_half_black"
+                android:gravity="center"
+                android:text="重新上传"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/imageDoctorT"
+                android:layout_width="@dimen/px_43"
+                android:layout_height="@dimen/px_43"
+                android:src="@drawable/example" />
+
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/buttonSave"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_margin="15dp"
+            android:background="@drawable/bg_btn_save_origin"
+            android:text="保存"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+</ScrollView>

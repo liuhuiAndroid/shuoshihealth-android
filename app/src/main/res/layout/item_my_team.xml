@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/px_68"
+    android:layout_marginStart="@dimen/px_14"
+    android:layout_marginTop="@dimen/px_10"
+    android:layout_marginEnd="@dimen/px_16"
+    android:background="@drawable/all_white_round">
+
+    <ImageView
+        android:id="@+id/imageType"
+        android:layout_width="@dimen/px_38"
+        android:layout_height="@dimen/px_38"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/px_14"
+        android:src="@drawable/tu" />
+
+    <TextView
+        android:id="@+id/textName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/px_10"
+        android:layout_toEndOf="@+id/imageType"
+        android:textColor="@color/yiJiuBlack"
+        android:textSize="14sp"
+        tools:text="丽丽的专家团队（3人）" />
+
+    <ImageView
+        android:layout_width="@dimen/px_6"
+        android:layout_height="@dimen/px_12"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/px_13"
+        android:src="@drawable/arrow_right" />
+</RelativeLayout>

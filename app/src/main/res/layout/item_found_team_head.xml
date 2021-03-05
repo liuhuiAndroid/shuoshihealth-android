@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="@dimen/px_76"
+        android:layout_height="@dimen/px_76"
+        android:layout_marginTop="@dimen/px_14"
+        android:gravity="center">
+
+        <com.tencent.qcloud.tim.uikit.component.CircleImageView
+            android:id="@+id/ImageDoctorAvatar"
+            android:layout_width="@dimen/px_48"
+            android:layout_height="@dimen/px_48"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/default_img" />
+
+        <TextView
+            android:id="@+id/textName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ImageDoctorAvatar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/px_5"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            tools:text="张三" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

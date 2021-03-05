@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <com.ssh.shuoshi.view.title.UniteTitle
+        android:id="@+id/uniteTitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_42"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleText="医师认证" />
+
+    <TextView
+        android:id="@+id/basicInfo"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/px_48"
+        android:gravity="center"
+        android:text="基本信息"
+        android:textColor="#FF824D"
+        android:textSize="15sp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/authorizationInfo"
+        app:layout_constraintTop_toBottomOf="@id/uniteTitle" />
+
+    <View
+        android:id="@+id/viewCenter"
+        android:layout_width="1dp"
+        android:layout_height="@dimen/px_18"
+        android:layout_marginTop="@dimen/px_15"
+        android:background="#E6E6E6"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/uniteTitle" />
+
+    <TextView
+        android:id="@+id/authorizationInfo"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/px_48"
+        android:gravity="center"
+        android:text="认证信息"
+        android:textColor="#191919"
+        android:textSize="15sp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@id/basicInfo"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/uniteTitle" />
+
+    <View
+        android:id="@+id/viewDividingLine"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_10"
+        android:background="#F7F7F7"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/basicInfo" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewDividingLine"
+        app:layout_constraintVertical_bias="0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

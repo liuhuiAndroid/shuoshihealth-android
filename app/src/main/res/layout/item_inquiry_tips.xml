@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relativeLayoutContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:paddingLeft="12.6dp"
+    android:paddingRight="12.6dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp">
+
+    <com.tencent.qcloud.tim.uikit.component.gatherimage.UserIconView
+        android:id="@+id/left_user_icon_view"
+        android:layout_width="41dp"
+        android:layout_height="41dp"
+        android:layout_below="@+id/chat_time_tv"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="6.23dp"
+        android:visibility="gone"
+        app:default_image="@drawable/default_user_icon"
+        app:image_radius="20dp" />
+
+    <com.tencent.qcloud.tim.uikit.component.gatherimage.UserIconView
+        android:id="@+id/right_user_icon_view"
+        android:layout_width="41dp"
+        android:layout_height="41dp"
+        android:layout_below="@+id/chat_time_tv"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="6.23dp"
+        android:visibility="gone"
+        app:default_image="@drawable/default_user_icon"
+        app:image_radius="20dp" />
+
+    <LinearLayout
+        android:id="@+id/msg_content_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_name_tv"
+        android:layout_marginStart="@dimen/px_31"
+        android:layout_marginEnd="@dimen/px_31"
+        android:orientation="horizontal">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/recyclerViewContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="#AAAAAA"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

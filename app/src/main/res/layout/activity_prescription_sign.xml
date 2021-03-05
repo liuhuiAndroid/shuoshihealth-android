@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <com.ssh.shuoshi.view.title.UniteTitle
+        android:id="@+id/uniteTitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_42"
+        app:titleText="电子处方签名" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_19"
+                android:gravity="center"
+                android:text="硕世互联网医院 处方笺"
+                android:textColor="@color/yiJiuBlack"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/px_14"
+                android:layout_marginTop="@dimen/px_20">
+
+                <TextView
+                    android:id="@+id/textNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/yiJiuBlack"
+                    android:textSize="11sp"
+                    tools:text="No：21347098763" />
+
+                <TextView
+                    android:id="@+id/textName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textNo"
+                    android:layout_marginTop="@dimen/px_10"
+                    android:textColor="@color/yiJiuBlack"
+                    android:textSize="11sp"
+                    tools:text="姓名：张三" />
+
+                <TextView
+                    android:id="@+id/textSex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/textName"
+                    android:layout_marginStart="@dimen/px_97"
+                    android:textColor="@color/yiJiuBlack"
+                    android:textSize="11sp"
+                    tools:text="性别：女" />
+
+                <TextView
+                    android:id="@+id/textAge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/textName"
+                    android:layout_marginStart="@dimen/px_208"
+                    android:textColor="@color/yiJiuBlack"
+                    android:textSize="11sp"
+                    tools:text="年龄：50岁" />
+
+                <TextView
+                    android:id="@+id/textOffice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textName"
+                    android:layout_marginTop="@dimen/px_10"
+                    android:textColor="@color/yiJiuBlack"
+                    android:textSize="11sp"
+                    tools:text="科室：妇科" />
+
+                <TextView
+                    android:id="@+id/textDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/textOffice"
+                    android:layout_marginStart="@dimen/px_97"
+                    android:textColor="@color/yiJiuBlack"
+                    android:textSize="11sp"
+                    tools:text="日期：2020-12-18" />
+
+                <TextView
+                    android:id="@+id/textMedicalNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/textOffice"
+                    android:layout_marginStart="@dimen/px_208"
+                    android:textColor="@color/yiJiuBlack"
+                    android:textSize="11sp"
+                    tools:text="门诊病历号：2345672319" />
+
+
+                <TextView
+                    android:id="@+id/textDiagnose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textOffice"
+                    android:layout_marginTop="@dimen/px_10"
+                    android:textColor="@color/yiJiuBlack"
+                    android:textSize="11sp"
+                    tools:text="诊断：卵巢气泡增多" />
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/textDiagnose"
+                    android:layout_marginTop="@dimen/px_10"
+                    android:layout_marginEnd="@dimen/px_14"
+                    android:background="@color/line_grey" />
+
+                <TextView
+                    android:id="@+id/textRp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view1"
+                    android:layout_marginTop="@dimen/px_10"
+                    android:text="Rp."
+                    android:textColor="@color/yiJiuBlack"
+                    android:textSize="11sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textRp"
+                    android:overScrollMode="never"
+                    android:scrollbars="none" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_chinese"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/recyclerView"
+                    android:layout_marginTop="@dimen/px_5"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/textUse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="用法用量: "
+                        android:textColor="@color/yiJiuBlack"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/textUseDesc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/textUse"
+                        android:textColor="@color/yiJiuBlack"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/textMethod"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textUse"
+                        android:layout_marginTop="@dimen/px_4"
+                        android:text="加工方法:"
+                        android:textColor="@color/yiJiuBlack"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/textMethodDesc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textUse"
+                        android:layout_marginTop="@dimen/px_4"
+                        android:layout_toEndOf="@+id/textMethod"
+                        android:textColor="@color/yiJiuBlack"
+                        android:textSize="11sp"
+                        tools:text="颗粒剂" />
+
+                    <TextView
+                        android:id="@+id/textAdvice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textUse"
+                        android:layout_marginStart="@dimen/px_25"
+                        android:layout_marginTop="@dimen/px_4"
+                        android:layout_toEndOf="@+id/textMethodDesc"
+                        android:text="加工方法:"
+                        android:textColor="@color/yiJiuBlack"
+                        android:textSize="11sp"
+                        tools:text="医嘱: 饭后1小时服用，忌辛辣生冷" />
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/rl_chinese"
+                    android:layout_marginTop="@dimen/px_10"
+                    android:layout_marginEnd="@dimen/px_14"
+                    android:background="@color/line_grey" />
+
+                <TextView
+                    android:id="@+id/textHint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view2"
+                    android:layout_marginTop="@dimen/px_10"
+                    android:gravity="center"
+                    android:text="以下空白，修改无效"
+                    android:textColor="@color/baSiGrey"
+                    android:textSize="13sp" />
+
+                <View
+                    android:id="@+id/view3"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/textHint"
+                    android:layout_marginTop="@dimen/px_110"
+                    android:layout_marginEnd="@dimen/px_14"
+                    android:background="@color/line_grey" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/px_14">
+
+                <TextView
+                    android:id="@+id/textPhysician"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/imgPhysician"
+                    android:layout_alignBottom="@+id/imgPhysician"
+                    android:gravity="center"
+                    android:text="医师:"
+                    android:textColor="@color/yiJiuBlack"
+                    android:textSize="11sp" />
+
+                <ImageView
+                    android:id="@+id/imgPhysician"
+                    android:layout_width="@dimen/px_68"
+                    android:layout_height="@dimen/px_36"
+                    android:layout_marginStart="@dimen/px_7"
+                    android:layout_toEndOf="@+id/textPhysician" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/imgPhysician"
+                    android:layout_alignBottom="@+id/imgPhysician"
+                    android:layout_marginStart="@dimen/px_135"
+                    android:gravity="center"
+                    android:text="药师:"
+                    android:textColor="@color/yiJiuBlack"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/imgPhysician"
+                    android:layout_alignBottom="@+id/imgPhysician"
+                    android:layout_marginStart="@dimen/px_254"
+                    android:gravity="center"
+                    android:text="核对/发药："
+                    android:textColor="@color/yiJiuBlack"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/textRemark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imgPhysician"
+                    android:gravity="center"
+                    android:text="备注：本72小时有效"
+                    android:textColor="@color/yiJiuBlack"
+                    android:textSize="11sp" />
+
+                <View
+                    android:id="@+id/view4"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/textRemark"
+                    android:layout_marginTop="@dimen/px_14"
+                    android:layout_marginEnd="@dimen/px_14"
+                    android:background="@color/line_grey" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_71">
+
+        <ImageView
+            android:id="@+id/imgSignature"
+            android:layout_width="@dimen/px_19"
+            android:layout_height="@dimen/px_19"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/px_14"
+            android:src="@drawable/signature" />
+
+        <TextView
+            android:id="@+id/textSignature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/px_8"
+            android:layout_toEndOf="@+id/imgSignature"
+            android:text="手绘签名"
+            android:textColor="@color/yiJiuBlack"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/imgSignaturePhoto"
+            android:layout_width="@dimen/px_93"
+            android:layout_height="@dimen/px_43"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/px_108" />
+
+        <Button
+            android:id="@+id/buttonSubmit"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="@dimen/px_125"
+            android:layout_height="@dimen/px_44"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/px_14"
+            android:background="@drawable/bg_btn_save_origin"
+            android:text="提交"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

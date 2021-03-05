@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="15dp">
+
+    <ImageView
+        android:id="@+id/mImageAvatar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="17dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textColor="#000000"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/mImageAvatar"
+        app:layout_constraintTop_toTopOf="@id/mImageAvatar"
+        tools:text="张三" />
+
+    <TextView
+        android:id="@+id/textSex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textColor="#333333"
+        android:textSize="15sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/textName"
+        app:layout_constraintLeft_toRightOf="@id/textName"
+        tools:text="女" />
+
+    <TextView
+        android:id="@+id/textAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textColor="#333333"
+        android:textSize="15sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/textSex"
+        app:layout_constraintLeft_toRightOf="@id/textSex"
+        tools:text="40岁" />
+
+    <TextView
+        android:id="@+id/textType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/bg_fragment1_patient_type"
+        android:paddingLeft="7dp"
+        android:paddingTop="3dp"
+        android:paddingRight="7dp"
+        android:paddingBottom="3dp"
+        android:textColor="#FF824D"
+        android:textSize="13sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/textAge"
+        app:layout_constraintLeft_toRightOf="@id/textAge"
+        tools:text="图文问诊" />
+
+    <TextView
+        android:id="@+id/textStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:textColor="#999999"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/textSex"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:text="待接诊" />
+
+    <TextView
+        android:id="@+id/textDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="15dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="#999999"
+        android:textSize="14sp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintLeft_toLeftOf="@id/textName"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textName"
+        tools:text="病情描述：妇科内分泌疾病、性发育异常、 功血、闭经、多囊卵巢综合症、卵不孕…" />
+
+    <TextView
+        android:id="@+id/textTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="15dp"
+        android:textColor="#999999"
+        android:textSize="14sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textDetail"
+        tools:text="下午13:02" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

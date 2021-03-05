@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F7F7"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <com.ssh.shuoshi.view.title.UniteTitle
+        android:id="@+id/uniteTitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_42"
+        app:titleText="编辑处方" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#F7F7F7"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_15"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="@dimen/px_15"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bg_round_white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:textColor="#C7C7C7"
+                    android:textSize="15sp"
+                    tools:text="NO234476543435" />
+
+                <TextView
+                    android:id="@+id/textTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="15dp"
+                    android:textColor="#C7C7C7"
+                    android:textSize="15sp"
+                    tools:text="2020-11-30" />
+
+                <TextView
+                    android:id="@+id/textName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textNo"
+                    android:layout_marginLeft="15dp"
+                    android:textColor="#191919"
+                    android:textSize="15sp"
+                    tools:text="姓名：张三" />
+
+                <TextView
+                    android:id="@+id/textSex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textNo"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#191919"
+                    android:textSize="15sp"
+                    tools:text="性别：女" />
+
+                <TextView
+                    android:id="@+id/textAge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textNo"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"
+                    android:textColor="#191919"
+                    android:textSize="15sp"
+                    tools:text="年龄：33岁" />
+
+                <TextView
+                    android:id="@+id/textDepartment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textName"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:textColor="#191919"
+                    android:textSize="15sp"
+                    tools:text="科室：妇科" />
+
+                <TextView
+                    android:id="@+id/textResultHint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textDepartment"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="诊断结果:  "
+                    android:textColor="#191919"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/textResult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textDepartment"
+                    android:layout_alignTop="@+id/textResultHint"
+                    android:layout_marginBottom="17dp"
+                    android:layout_toEndOf="@+id/textResultHint"
+                    android:textColor="#191919"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    tools:text="淋巴细胞甲状腺炎" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_15"
+                android:layout_marginRight="@dimen/px_15"
+                android:minHeight="@dimen/px_110"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/bg_round_white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textViewPatientTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/px_14"
+                        android:layout_marginTop="36dp"
+                        android:text="Rp."
+                        android:textColor="#000000"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/buttonSaveFormwork"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/px_32"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="15dp"
+                        android:background="@drawable/bg_btn_history_prescription"
+                        android:paddingStart="@dimen/px_10"
+                        android:paddingEnd="@dimen/px_10"
+                        android:text="处方模版"
+                        android:textColor="#FF824D" />
+
+                    <Button
+                        android:id="@+id/buttonHistoryPrescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/px_32"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/px_11"
+                        android:layout_toLeftOf="@id/buttonSaveFormwork"
+                        android:background="@drawable/bg_btn_history_prescription"
+                        android:text="历史处方"
+                        android:textColor="#FF824D" />
+
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/px_15"
+                    android:layout_marginEnd="@dimen/px_15"
+                    android:overScrollMode="never"
+                    android:scrollbars="none" />
+
+                <View
+                    android:id="@+id/viewLine01"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/line_grey" />
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayoutAddDrugs"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_height="50dp">
+
+                    <TextView
+                        android:id="@+id/textAdd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="15dp"
+                        android:drawablePadding="5dp"
+                        android:text="新增药品"
+                        android:textColor="#668CFF"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="@dimen/px_16"
+                        android:layout_height="@dimen/px_16"
+                        android:layout_alignTop="@+id/textAdd"
+                        android:layout_alignBottom="@+id/textAdd"
+                        android:layout_marginEnd="@dimen/px_7"
+                        android:layout_toStartOf="@+id/textAdd"
+                        android:src="@drawable/add" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_72"
+        android:background="@color/white">
+
+        <Button
+            android:id="@+id/buttonSubmit"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/px_22"
+            android:layout_marginTop="@dimen/px_14"
+            android:layout_marginEnd="@dimen/px_22"
+            android:layout_marginBottom="@dimen/px_14"
+            android:background="@drawable/change_button"
+            android:enabled="false"
+            android:text="生成处方"
+            android:textColor="@drawable/change_btn_text"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+</LinearLayout>

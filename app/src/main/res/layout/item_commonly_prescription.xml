@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mContainer"
+    android:layout_width="match_parent"
+    android:layout_height="127dp"
+    android:padding="15dp">
+
+    <TextView
+        android:id="@+id/textViewResultHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="初步诊断"
+        android:textColor="#848484"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/textViewResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/textViewResultHint"
+        android:layout_marginLeft="95dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="#191919"
+        android:textSize="15sp"
+        tools:text="子宫肥大" />
+
+    <TextView
+        android:id="@+id/textViewRpHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewResultHint"
+        android:layout_marginTop="10dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="Rp."
+        android:textColor="#848484"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/textViewRp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/textViewRpHint"
+        android:layout_marginLeft="95dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="#191919"
+        android:textSize="15sp"
+        tools:text="黄柏洗液、克林霉素片" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="35dp"
+        android:layout_marginRight="15dp"
+        android:src="@mipmap/right_arrow" />
+
+    <Button
+        android:id="@+id/buttonUse"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/bg_btn_save_origin"
+        android:text="使用处方"
+        android:textColor="#FFFFFF" />
+
+</RelativeLayout>

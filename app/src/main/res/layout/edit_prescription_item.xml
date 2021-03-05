@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/px_10"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/px_12"
+        android:background="@drawable/bg_round_white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_round_grey"
+            android:padding="@dimen/px_13">
+
+            <TextView
+                android:id="@+id/textViewDrugName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/px_4"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="#191919"
+                android:textSize="15sp"
+                tools:text="硒酵母片(50ug*50片)" />
+
+            <TextView
+                android:id="@+id/textViewSpecifications"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewDrugName"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/px_6"
+                android:textColor="#848484"
+                android:textSize="13sp"
+                tools:text="规格：100mg*8粒/盒" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="数量"
+                android:textColor="#848484"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="92dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/bg_add_del"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/rlDel"
+                    android:layout_width="@dimen/px_24"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="@dimen/px_10"
+                        android:layout_height="@dimen/px_10"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:src="@drawable/num_minus" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#cccccc" />
+
+                <TextView
+                    android:id="@+id/textViewNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="#191919"
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#cccccc" />
+
+                <RelativeLayout
+                    android:id="@+id/rlAdd"
+                    android:layout_width="@dimen/px_24"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="@dimen/px_10"
+                        android:layout_height="@dimen/px_10"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:src="@drawable/num_add" />
+                </RelativeLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutSingleQuantity"
+            android:layout_width="match_parent"
+            android:layout_height="44dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="每次剂量"
+                android:textColor="#848484"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_width="@dimen/px_6"
+                android:layout_height="@dimen/px_12"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/arrow_right" />
+
+            <EditText
+                android:id="@+id/editSingleNum"
+                android:layout_width="@dimen/px_62"
+                android:layout_height="@dimen/px_34"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/px_12"
+                android:layout_toStartOf="@+id/textViewSingleQuantity"
+                android:background="#F7F7F7"
+                android:gravity="center"
+                android:maxLength="6"
+                android:text="1"
+                android:textColor="@color/yiJiuBlack"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textViewSingleQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/px_5"
+                android:layout_toStartOf="@+id/img1"
+                android:gravity="right"
+                android:hint="请选择"
+                android:textColor="#191919"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutFrequency"
+            android:layout_width="match_parent"
+            android:layout_height="44dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="频次"
+                android:textColor="#848484"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/img2"
+                android:layout_width="@dimen/px_6"
+                android:layout_height="@dimen/px_12"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/arrow_right" />
+
+            <TextView
+                android:id="@+id/textViewFrequency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/px_5"
+                android:layout_toStartOf="@+id/img2"
+                android:textColor="#191919"
+                android:textSize="14sp"
+                tools:text="每日1次" />
+
+            <EditText
+                android:id="@+id/editFrequency"
+                android:layout_width="@dimen/px_82"
+                android:layout_height="@dimen/px_40"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/px_10"
+                android:layout_toStartOf="@+id/textViewFrequency"
+                android:background="#F7F7F7"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutUsage"
+            android:layout_width="match_parent"
+            android:layout_height="44dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="用法"
+                android:textColor="#848484"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/img3"
+                android:layout_width="@dimen/px_6"
+                android:layout_height="@dimen/px_12"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/arrow_right" />
+
+            <TextView
+                android:id="@+id/textViewUsage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/px_5"
+                android:layout_toStartOf="@+id/img3"
+                android:textColor="#191919"
+                android:textSize="14sp"
+                tools:text="口服" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/buttonDelete"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="@dimen/px_60"
+                android:layout_height="@dimen/px_29"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/bg_btn_delete"
+                android:text="删除"
+                android:textColor="#666666"
+                android:textSize="13sp" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/viewLine01"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="@dimen/px_12"
+            android:background="@color/line_grey" />
+
+    </LinearLayout>
+
+</LinearLayout>

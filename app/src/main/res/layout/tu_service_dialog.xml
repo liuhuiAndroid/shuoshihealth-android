@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent_half"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/px_24"
+        android:layout_marginEnd="@dimen/px_24"
+        android:background="@drawable/all_round_dialog"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_tile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_14"
+            android:layout_marginBottom="@dimen/px_29"
+            android:gravity="center"
+            android:text="图文问诊价格"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/px_14"
+            android:layout_marginEnd="@dimen/px_15">
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/et_number"
+                android:layout_alignBottom="@+id/et_number"
+                android:gravity="center"
+                android:text="价格设置"
+                android:textColor="@color/yiJiuBlack"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/et_number"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_42"
+                android:layout_marginStart="@dimen/px_14"
+                android:layout_marginEnd="@dimen/px_14"
+                android:layout_toStartOf="@+id/tv_num"
+                android:layout_toEndOf="@+id/tv_price"
+                android:background="@color/fQi_grey"
+                android:gravity="center_vertical"
+                android:hint="建议0-200元"
+                android:inputType="number"
+                android:maxLength="4"
+                android:paddingStart="@dimen/px_19"
+                android:textColor="@color/yiJiuBlack"
+                android:textColorHint="@color/bA_grey"
+                android:textCursorDrawable="@drawable/my_cursor"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/et_number"
+                android:layout_alignBottom="@+id/et_number"
+                android:layout_alignParentEnd="true"
+                android:gravity="center"
+                android:text="元/次"
+                android:textColor="@color/yiJiuBlack"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/px_14"
+            android:layout_marginTop="@dimen/px_14"
+            android:text="提示：24小时不答复，费用自动退给患者"
+            android:textColor="@color/baSiGrey"
+            android:textSize="14sp" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="@dimen/px_14"
+            android:background="@color/line_grey" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_52"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_cancel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="@color/baSiGrey"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/line_grey" />
+
+            <TextView
+                android:id="@+id/tv_save"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="保存"
+                android:textColor="@color/orange"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.ssh.shuoshi">
+
+    <permission
+        android:name="com.ssh.shuoshi.permission.MIPUSH_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.ssh.shuoshi.permission.MIPUSH_RECEIVE" />
+
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- 访问照相机-->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 访问网络-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 用于读取手机当前的状态-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!--写入,读取外部存储-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 允许应用程序获取网络信息状态-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--允许应用程序改变网络连接状态-->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!--允许应用程序访问Wi-Fi网络状态信息-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!--允许应用程序改变Wi-Fi连接状态-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission
+        android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"
+        tools:ignore="ProtectedPermissions" />
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/youan"
+        android:roundIcon="@mipmap/youan"
+        android:label="@string/app_name"
+        android:maxAspectRatio="2.4"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:resizeableActivity="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="XIAOMI_APPKEY"
+            android:value="MI-5761896819072" />
+
+        <meta-data
+            android:name="XIAOMI_APPID"
+            android:value="MI-2882303761518968072" />
+
+        <!-- 适配全面屏 -->
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.4" /> <!-- 适配华为(hua wei)刘海屏 -->
+        <meta-data
+            android:name="android.notch_support"
+            android:value="true" /> <!-- 适配小米(xiao mi)刘海屏 -->
+        <meta-data
+            android:name="notch.config"
+            android:value="portrait|landscape" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
+        <!-- 患者消息历史记录 -->
+        <activity
+            android:name=".ui.web.WebActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 患者消息历史记录 -->
+        <activity
+            android:name=".ui.historymessage.HistoryMessageActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 消息中心 -->
+        <activity
+            android:name=".ui.messagecenter.MessageCenterActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 问诊订单详情 -->
+        <activity
+            android:name=".ui.imagegallery.ImageGalleryActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 问诊订单详情 -->
+        <activity
+            android:name=".ui.myorder.consultationdetail.ConsultationDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 处方订单详情 -->
+        <activity
+            android:name=".ui.myorder.prescriptiondetail.PrescriptionDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 呼叫页面 -->
+        <activity
+            android:name=".ui.videocall.TRTCVideoCallActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" />
+
+        <!-- 图文问诊 -->
+        <activity
+            android:name=".ui.graphicinquiry.GraphicInquiryActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <!-- 新增常用处方 -->
+        <activity
+            android:name=".ui.prescription.template.add.AddCommonlyTempalteActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 我的订单 -->
+        <activity
+            android:name=".ui.myorder.MyOrderActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 处方模版 -->
+        <activity
+            android:name=".ui.prescription.template.PrescriptionTemplateActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 中药 添加药材 -->
+        <activity
+            android:name=".ui.prescription.chinesemedicine.addherbs.ChineseMedicineMedicalAddHerbsActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 中药 医嘱 -->
+        <activity
+            android:name=".ui.prescription.chinesemedicine.advice.ChineseMedicineMedicalAdviceActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 中药 编辑处方 -->
+        <activity
+            android:name=".ui.prescription.chinesemedicine.edit.EditChineseMedicinePrescriptionActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 中药 方案类型 -->
+        <activity
+            android:name=".ui.prescription.chinesemedicine.options.ChineseMedicineOptionsActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- CA签名实名认证 认证结果 -->
+        <activity
+            android:name=".ui.verified.result.VerifiedResultActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- CA签名实名认证 手机认证 -->
+        <activity
+            android:name=".ui.verified.phone.VerifiedPhoneActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- CA签名实名认证 人脸识别 -->
+        <activity
+            android:name=".ui.verified.face.VerifiedFaceActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- CA签名实名认证 选择方式 -->
+        <activity
+            android:name=".ui.verified.choose.VerifiedChooseActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- CA签名意愿认证 选择方式 -->
+        <activity
+            android:name=".ui.verified.choose.AspirationVerifiedChooseActivity"
+            android:screenOrientation="portrait" />
+
+        <!--电子处方签名-->
+        <activity
+            android:name=".ui.verified.sign.PrescriptionSignActivity"
+            android:screenOrientation="portrait" />
+
+        <!--手机认证  有意愿-->
+        <activity
+            android:name=".ui.verified.phoneaspiration.PhoneAspirationActivity"
+            android:screenOrientation="portrait" />
+
+        <!--手绘签名-->
+        <activity
+            android:name=".ui.verified.freehand.FreeHandActivity"
+            android:screenOrientation="landscape" />
+
+        <!--处方提交审核-->
+        <activity
+            android:name=".ui.verified.submit.PrescriptionSubmitCheckActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 电子/常用处方 -->
+        <activity
+            android:name=".ui.prescription.westernmedicine.commonlyprescription.CommonlyPrescriptionActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 历史处方 -->
+        <activity
+            android:name=".ui.prescription.westernmedicine.history.HistoryPrescriptionActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 编辑处方 -->
+        <activity
+            android:name=".ui.prescription.westernmedicine.edit.EditPrescriptionActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- 常用药品 -->
+        <activity
+            android:name=".ui.prescription.westernmedicine.commonlydrugs.CommonlyDrugsActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 新增药品 -->
+        <activity
+            android:name=".ui.prescription.westernmedicine.add.NewDrugsActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 问诊小结 -->
+        <activity
+            android:name=".ui.consultationsummary.ConsultationSummaryActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 诊断搜索 -->
+        <activity
+            android:name=".ui.diagnosissearch.DiagnosisSearchActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 修改密码 -->
+        <activity
+            android:name=".ui.modifypassword.ModifyPasswordActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.worksetting.WorkSettingActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.login.PasswordLoginActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.login.CodeOneLoginActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.login.CodeTwoLoginActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.forgetpassword.ForgetPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.doctorauthentication.DoctorAuthenticationActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.main.MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="com.ssh.shuoshi"
+                    android:path="/main"
+                    android:scheme="health" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.about.AboutActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- CA签名实名认证 -->
+        <activity
+            android:name=".ui.verified.start.VerifiedStartActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.imagediagnose.main.ImageDiagnoseActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.videodiagnose.main.VideoDiagnoseActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|adjustUnspecified" />
+
+        <activity
+            android:name=".ui.authority.one.AuthorityOneActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.authority.two.AuthorityTwoActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.authority.three.AuthorityThreeActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.authority.info.AuthorityInfoActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.authority.goodat.AuthorityGoodAtActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.authority.editphoto.EditPhotoActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.worksetting.servicenote.ServiceNoteActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.worksetting.timesetting.ServiceTimeSettingActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.worksetting.addtime.ServiceAddTimeActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.prescription.template.commonlywesternmedicine.add.TemplateAddDrugsActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.setting.SettingActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.prescription.template.commonlyprescriptionwestern.templatedetail.PrescriptionTemplateDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <!--患者管理-->
+        <activity
+            android:name=".ui.patient.PatientManageActivity"
+            android:screenOrientation="portrait" />
+
+        <!--处方管理-->
+        <activity
+            android:name=".ui.followup.FollowUpManageActivity"
+            android:screenOrientation="portrait" />
+
+        <!--患者病历-->
+        <activity
+            android:name=".ui.medicalhistory.MedicalHistoryActivity"
+            android:screenOrientation="portrait" />
+
+        <!--我的处方-->
+        <activity
+            android:name=".ui.myprescription.main.MyPrescriptionActivity"
+            android:screenOrientation="portrait" />
+
+        <!--处方详情-->
+        <activity
+            android:name=".ui.myprescription.detail.MyPrescriptionDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.verified.h5.H5FirstActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="shuoshi"
+                    android:path="/signBack"
+                    android:scheme="esign" />
+                <data
+                    android:host="shuoshi"
+                    android:path="/realBack"
+                    android:scheme="esign" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.verified.h5.H5SecondActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="https://esign.cn"
+                    android:pathPattern="/demo/signBack"
+                    android:scheme="esign" />
+
+                <data
+                    android:host="demo"
+                    android:path="/signBack"
+                    android:scheme="esign" />
+                <data
+                    android:host="demo"
+                    android:path="/realBack"
+                    android:scheme="esign" />
+            </intent-filter>
+        </activity>
+
+        <!--我的团队-->
+        <activity
+            android:name=".ui.team.team.MyTeamActivity"
+            android:screenOrientation="portrait" />
+
+        <!--我的专家团队-->
+        <activity
+            android:name=".ui.team.doctorteam.MyDoctorTeamActivity"
+            android:screenOrientation="portrait" />
+
+        <!--团队介绍-->
+        <activity
+            android:name=".ui.team.introduce.TeamIntroduceActivity"
+            android:screenOrientation="portrait" />
+
+        <!--创建专家团队-->
+        <activity
+            android:name=".ui.team.found.FoundTeamActivity"
+            android:screenOrientation="portrait" />
+
+        <!--添加医生一-->
+        <activity
+            android:name=".ui.team.addF.DoctorAddFActivity"
+            android:screenOrientation="portrait" />
+
+        <!--添加医生二-->
+        <activity
+            android:name=".ui.team.addS.DoctorAddSActivity"
+            android:screenOrientation="portrait" />
+
+        <!--添加患者-->
+        <activity
+            android:name=".ui.addpatient.AddPatientActivity"
+            android:screenOrientation="portrait" />
+
+        <!--个人头像-->
+        <activity
+            android:name=".ui.headimg.DoctorHeadActivity"
+            android:screenOrientation="portrait" />
+
+        <!--患者评价-->
+        <activity
+            android:name=".ui.comment.PatientCommentActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".TestActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- Since JCore2.0.0 Required SDK核心功能-->
+        <!-- 可配置android:process参数将Service放在其他进程中；android:enabled属性不能是false -->
+        <!-- 这个是自定义Service，要继承极光JCommonService，可以在更多手机平台上使得推送通道保持的更稳定 -->
+        <service
+            android:name="com.ssh.shuoshi.service.MyJCommonService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":pushcore">
+            <intent-filter>
+                <action android:name="cn.jiguang.user.service.action" />
+            </intent-filter>
+        </service>
+
+        <!-- Required since 3.0.7 -->
+        <!-- 新的 tag/alias 接口结果返回需要开发者配置一个自定的广播 -->
+        <!-- 3.3.0开始所有事件将通过该类回调 -->
+        <!-- 该广播需要继承 JPush 提供的 JPushMessageReceiver 类, 并如下新增一个 Intent-Filter -->
+        <receiver
+            android:name="com.ssh.shuoshi.receive.MyJPushMessageReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
+                <category android:name="com.ssh.shuoshi" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="cn.jpush.android.service.PluginHuaweiPlatformsService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.huawei.push.action.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="XG_SERVER_SUFFIX"
+            android:value="tpns.sh.tencent.com" />
+
+        <receiver android:name="com.ssh.shuoshi.receive.MyMessageReceiver">
+            <intent-filter>
+                <!-- 接收消息透传 -->
+                <action android:name="com.tencent.android.xg.vip.action.PUSH_MESSAGE" />
+                <!-- 监听注册、反注册、设置/删除标签、通知被点击等处理结果 -->
+                <action android:name="com.tencent.android.xg.vip.action.FEEDBACK" />
+            </intent-filter>
+        </receiver>
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+
+        <!-- TPNS 小米 -->
+        <service
+            android:name="com.xiaomi.push.service.XMPushService"
+            android:enabled="true"
+            android:process=":pushservice" />
+        <service
+            android:name="com.xiaomi.push.service.XMJobService"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:process=":pushservice" />
+        <!-- 注：此service必须在3.0.1版本以后（包括3.0.1版本）加入 -->
+        <service
+            android:name="com.xiaomi.mipush.sdk.PushMessageHandler"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name="com.xiaomi.mipush.sdk.MessageHandleService"
+            android:enabled="true" />
+        <!-- 注：此service必须在2.2.5版本以后（包括2.2.5版本）加入 -->
+        <receiver
+            android:name="com.xiaomi.push.service.receivers.NetworkStatusReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.xiaomi.push.service.receivers.PingReceiver"
+            android:exported="false"
+            android:process=":pushservice">
+            <intent-filter>
+                <action android:name="com.xiaomi.push.PING_TIMER" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name="com.ssh.shuoshi.receive.MyXMPushMessageReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.MESSAGE_ARRIVED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.ERROR" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+
+</manifest>

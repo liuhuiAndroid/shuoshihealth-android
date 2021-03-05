@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <com.ssh.shuoshi.view.title.UniteTitle
+        android:id="@+id/uniteTitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_42"
+        app:titleText="实名认证" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/px_79"
+        android:layout_height="@dimen/px_79"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/px_50"
+        android:src="@drawable/oauth_success" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/px_38"
+        android:text="恭喜您，完成个人实名认证"
+        android:textColor="#191919"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/buttonSubmit"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="@dimen/px_180"
+        android:layout_height="45dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/px_29"
+        android:background="@drawable/bg_btn_save_origin"
+        android:text="返回（3s）"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp" />
+
+</LinearLayout>

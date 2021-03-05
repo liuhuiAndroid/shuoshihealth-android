@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <com.ssh.shuoshi.view.title.UniteTitle
+        android:id="@+id/uniteTitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_42"
+        app:titleText="患者病历" />
+
+    <com.ssh.shuoshi.library.widget.MyPtrClassicFrameLayout
+        android:id="@+id/ptr_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="1px"
+        app:ptr_duration_to_close="300"
+        app:ptr_duration_to_close_header="500"
+        app:ptr_keep_header_when_refresh="true"
+        app:ptr_pull_to_fresh="false"
+        app:ptr_ratio_of_header_height_to_refresh="1.0"
+        app:ptr_resistance="1.7">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedSc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/fQi_grey">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rlHead"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px_56"
+                    android:layout_marginStart="@dimen/px_15"
+                    android:layout_marginTop="@dimen/px_10"
+                    android:layout_marginEnd="@dimen/px_15"
+                    android:background="@drawable/all_white_round"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/text1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/px_14"
+                        android:text="患者信息"
+                        android:textColor="@color/baSiGrey"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/textName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/px_9"
+                        android:layout_toEndOf="@+id/text1"
+                        android:textColor="@color/yiJiuBlack"
+                        android:textSize="14sp"
+                        tools:text="张三" />
+
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:overScrollMode="never"
+                    android:paddingBottom="@dimen/px_10"
+                    android:scrollbars="none" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </com.ssh.shuoshi.library.widget.MyPtrClassicFrameLayout>
+
+</LinearLayout>

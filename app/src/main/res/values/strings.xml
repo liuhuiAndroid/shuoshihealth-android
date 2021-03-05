@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">悠安医生</string>
+
+    <string name="fragment1_my_info">我的信息</string>
+    <string name="fragment1_patient_title">患者消息</string>
+
+    <string name="pickerview_cancel">取消</string>
+    <string name="pickerview_submit">确定</string>
+    <string name="pickerview_year">年</string>
+    <string name="pickerview_month">月</string>
+    <string name="pickerview_day">日</string>
+    <string name="pickerview_hours">时</string>
+    <string name="pickerview_minutes">分</string>
+    <string name="pickerview_seconds">秒</string>
+
+    <string name="trtccalling_title_video_call">"视频通话"</string>
+    <string name="trtccalling_tips_start_call">"点击上方按钮发起呼叫"</string>
+    <string name="trtccalling_inviting_tag">"他们也在"</string>
+    <string name="trtccalling_call_time_default">"00:01"</string>
+    <string name="trtccalling_contact_default_name">"测试123"</string>
+    <string name="trtccalling_invite_video_call">"邀请您进行视频通话..."</string>
+    <string name="trtccalling_search_call_hint">搜索手机号</string>
+    <string name="trtccalling_start_call">"呼叫"</string>
+    <string name="trtccalling_complete">"开始"</string>
+    <string name="trtccalling_search">"搜 索"</string>
+    <string name="trtccalling_toast_search_fail" formatted="false">"搜索失败:%1$s"</string>
+    <string name="trtccalling_toast_not_add_self">"不能添加自己"</string>
+    <string name="trtccalling_toast_call_error_msg" formatted="false">"发生错误[%1$d]:%2$s"</string>
+    <string name="trtccalling_toast_user_reject_call" formatted="false">"%1$s拒绝通话"</string>
+    <string name="trtccalling_toast_user_not_response" formatted="false">"%1$s无响应"</string>
+    <string name="trtccalling_toast_user_busy" formatted="false">"%1$s忙线"</string>
+    <string name="trtccalling_toast_user_cancel_call" formatted="false">"%1$s取消了通话"</string>
+    <string name="trtccalling_toast_user_timeout" formatted="false">"%1$s通话超时"</string>
+    <string name="trtccalling_toast_enable_mute">"开启静音"</string>
+    <string name="trtccalling_toast_disable_mute">"关闭静音"</string>
+    <string name="trtccalling_toast_use_speaker">"使用扬声器"</string>
+    <string name="trtccalling_toast_use_handset">"使用听筒"</string>
+    <string name="trtccalling_called_time_format" formatted="false">"%02d:%02d"</string>
+    <string name="trtccalling_title_recent_search">"最近搜索"</string>
+    <string name="trtccalling_title_search_result">"搜索结果"</string>
+    <string name="trtccalling_tips_search">"搜索添加已注册用户\n\t\t\t以发起通话"</string>
+    <string name="trtccalling_self_phone">您的手机号:</string>
+    <string name="trtccalling_call_self_format">您的手机号: %s</string>
+    <string name="trtccalling_video_call">视频通话</string>
+    <string name="trtccalling_audio_call">语音通话</string>
+    <string name="trtccalling_toast_user_end">%s 结束通话</string>
+
+    <string name="aspiration_none">使用该服务，表示您确定每次处方签名均为本人签署，无需签名后进行意愿认证 (手机验证码/人脸认证)</string>
+    <string name="aspiration_have">使用该服务，表示您同意每次处方签名后，进行意愿认证 (手机验证码/人脸识别)</string>
+    
+    <string name="image_text_one">根据医生的擅长、专业为对症患者提供病情咨询、诊疗建议、用药指导等服务，利用空余时间帮助更多的患者。</string>
+    <string name="image_text_two">由医生自行设置患者问诊价格，平台不收取服务费。</string>
+    <string name="image_text_three">1.问诊审核\n患者下单后，请您在24小时内接诊，如遇特殊情况您可取消订单，费用会全额退给患者（如非遇到不可抗因素，不建议取消订单，会降低您的信用值）。\n\n2.问诊开始\n接诊后，您可以在24小时内通过图文沟通方式为患者在线诊疗。\n\n3.问诊完成\n如患者已得到满意答复，您可点击结束问诊主动结束问诊。</string>
+
+    <string name="video_text_one">根据医生的擅长、专业为对症患者提供病情咨询、诊疗建议、用药指导等服务，利用空余时间帮助更多的患者。</string>
+    <string name="video_text_two">由医生自行设置患者问诊价格，平台不收取服务费。</string>
+    <string name="video_text_three">1.问诊审核\n患者下单后，请您在患者预约时间段内接诊。如遇特殊情况您可取消订单，费用会全额退给患者（如非遇到不可抗因素，不建议取消订单，会降低您的信用值）。\n\n2.问诊开始\n接诊后，由您向患者主动发起视频邀请，通过视频方式为患者在线诊疗。\n\n3.问诊完成\n如患者已得到满意答复，您可点击结束问诊主动结束问诊。</string>
+
+</resources>

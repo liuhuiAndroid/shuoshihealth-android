@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <com.ssh.shuoshi.view.title.UniteTitle
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_42" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px_4"
+        android:gravity="center"
+        android:text="服务介绍"
+        android:textColor="@color/yiJiuBlack"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/px_14"
+            android:layout_marginEnd="@dimen/px_15"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_24"
+                android:layout_marginBottom="@dimen/px_13"
+                android:text="服务定位"
+                android:textColor="@color/liuLiu_grey"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textOne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/yiJiuBlack"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_14"
+                android:layout_marginBottom="@dimen/px_14"
+                android:text="服务定价"
+                android:textColor="@color/liuLiu_grey"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textTwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/yiJiuBlack"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_19"
+                android:layout_marginBottom="@dimen/px_14"
+                android:text="服务规则"
+                android:textColor="@color/liuLiu_grey"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textThree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/yiJiuBlack"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/px_22"
+        android:layout_marginTop="@dimen/px_14"
+        android:layout_marginEnd="@dimen/px_22"
+        android:layout_marginBottom="@dimen/px_14"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_open"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_44"
+            android:background="@drawable/bg_btn_save_origin"
+            android:text="立即开通"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

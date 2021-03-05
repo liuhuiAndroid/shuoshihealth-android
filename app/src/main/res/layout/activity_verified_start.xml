@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <com.ssh.shuoshi.view.title.UniteTitle
+        android:id="@+id/uniteTitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_42"
+        app:titleText="CA签名实名认证" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/px_103"
+            android:layout_height="@dimen/px_81"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/px_50"
+            android:src="@drawable/ic_verified_start" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px_28"
+            android:layout_marginTop="@dimen/px_34"
+            android:layout_marginRight="@dimen/px_28"
+            android:text="为了确保互联网诊疗的电子处方上签名真实有效，使用电子签名CA服务，需要您进行实名认证，可能采集如下信息："
+            android:textColor="#333333"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px_28"
+            android:layout_marginTop="@dimen/px_10"
+            android:layout_marginRight="@dimen/px_28"
+            android:text="1、操作人姓名、证件号"
+            android:textColor="#333333"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px_28"
+            android:layout_marginTop="@dimen/px_5"
+            android:layout_marginRight="@dimen/px_28"
+            android:text="2、网络运营商注册手机号（仅手机认证获取）"
+            android:textColor="#333333"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px_28"
+            android:layout_marginTop="@dimen/px_5"
+            android:layout_marginRight="@dimen/px_28"
+            android:text="3、操作人人脸视频（仅人脸识别获取）"
+            android:textColor="#333333"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginTop="@dimen/px_10"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/cb_agree"
+            style="@style/CustomCheckboxTheme"
+            android:layout_width="@dimen/px_16"
+            android:layout_height="@dimen/px_16"
+            android:layout_marginStart="@dimen/px_14" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/px_6"
+            android:text="我已同意并阅读"
+            android:textColor="@color/hintGrey" />
+
+        <TextView
+            android:id="@+id/tv_law"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="《实名认证服务协议》"
+            android:textColor="@color/orange" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonSubmit"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/change_button"
+        android:enabled="false"
+        android:text="开始认证"
+        android:textColor="@drawable/change_btn_text"
+        android:textSize="15sp" />
+
+</LinearLayout>

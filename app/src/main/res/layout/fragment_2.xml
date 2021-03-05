@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:paddingTop="25dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_106"
+        android:orientation="horizontal">
+
+        <com.tencent.qcloud.tim.uikit.component.CircleImageView
+            android:id="@+id/mImageAvatar"
+            android:layout_width="@dimen/px_58"
+            android:layout_height="@dimen/px_58"
+            android:layout_marginStart="@dimen/px_14"
+            android:layout_marginTop="@dimen/px_25"
+            android:src="@drawable/default_img" />
+
+        <RelativeLayout
+            android:id="@+id/rl_have_info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignTop="@+id/mImageAvatar"
+            android:layout_alignBottom="@+id/mImageAvatar"
+            android:layout_toEndOf="@+id/mImageAvatar"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/textName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/px_10"
+                android:textColor="@color/sanSanBlack"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                tools:text="王医生" />
+
+            <TextView
+                android:id="@+id/textDepartment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/textName"
+                android:layout_alignBottom="@+id/textName"
+                android:layout_marginStart="@dimen/px_10"
+                android:layout_toEndOf="@+id/textName"
+                android:gravity="center"
+                android:textColor="#848484"
+                android:textSize="14sp"
+                tools:text="妇科" />
+
+            <TextView
+                android:id="@+id/textJobTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/textName"
+                android:layout_alignBottom="@+id/textName"
+                android:layout_marginStart="@dimen/px_6"
+                android:layout_toEndOf="@+id/textDepartment"
+                android:gravity="center"
+                android:textColor="#848484"
+                android:textSize="14sp"
+                tools:text="副主任医师" />
+
+            <ImageView
+                android:id="@+id/img_edit"
+                android:layout_width="@dimen/px_13"
+                android:layout_height="@dimen/px_13"
+                android:layout_alignTop="@+id/textName"
+                android:layout_alignBottom="@+id/textName"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/px_14"
+                android:src="@drawable/edit" />
+
+            <TextView
+                android:id="@+id/textHospitalName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textName"
+                android:layout_alignStart="@+id/textName"
+                android:layout_marginTop="@dimen/px_6"
+                android:textColor="#848484"
+                android:textSize="14sp"
+                tools:text="上海中医药大学医院附属曙光医院" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_no_state"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignTop="@+id/mImageAvatar"
+            android:layout_alignBottom="@+id/mImageAvatar"
+            android:layout_toEndOf="@+id/mImageAvatar"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_apply_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/px_10"
+                android:textColor="@color/yiJiuBlack"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                tools:text="请进行资质认证" />
+
+            <TextView
+                android:id="@+id/textHint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_apply_state"
+                android:layout_alignStart="@+id/tv_apply_state"
+                android:layout_marginTop="@dimen/px_6"
+                android:text="立即开启您的线上工作室吧～"
+                android:textColor="@color/baSiGrey"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_no_info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignTop="@+id/mImageAvatar"
+            android:layout_alignBottom="@+id/mImageAvatar"
+            android:layout_toEndOf="@+id/mImageAvatar"
+            android:gravity="center_vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tv_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/px_10"
+                android:text="点击登录"
+                android:textColor="@color/yiJiuBlack"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textHint2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_login"
+                android:layout_alignStart="@+id/tv_login"
+                android:layout_marginTop="@dimen/px_6"
+                android:text="登录后才可体验更多功能哦～"
+                android:textColor="@color/baSiGrey"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewBlank1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_10"
+        android:background="@color/fQi_grey" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/px_14"
+        android:paddingBottom="@dimen/px_14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <ImageView
+            android:layout_width="@dimen/px_18"
+            android:layout_height="@dimen/px_18"
+            android:layout_marginStart="@dimen/px_20"
+            android:src="@drawable/order"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/px_47"
+            android:text="我的订单"
+            android:textColor="#333333"
+            android:textSize="15sp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="@dimen/px_6"
+            android:layout_height="@dimen/px_12"
+            android:layout_marginEnd="@dimen/px_14"
+            android:src="@drawable/arrow_right"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutPrescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/px_14"
+        android:paddingBottom="@dimen/px_14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraintLayoutOrder">
+
+        <ImageView
+            android:layout_width="@dimen/px_18"
+            android:layout_height="@dimen/px_18"
+            android:layout_marginStart="@dimen/px_20"
+            android:src="@drawable/recipe"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/px_47"
+            android:text="我的处方"
+            android:textColor="#333333"
+            android:textSize="15sp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="@dimen/px_6"
+            android:layout_height="@dimen/px_12"
+            android:layout_marginEnd="@dimen/px_14"
+            android:src="@drawable/arrow_right"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutExpert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/px_14"
+        android:paddingBottom="@dimen/px_15"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraintLayoutPrescription">
+
+        <ImageView
+            android:layout_width="@dimen/px_18"
+            android:layout_height="@dimen/px_18"
+            android:layout_marginStart="@dimen/px_20"
+            android:src="@drawable/team"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_team"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/px_47"
+            android:text="我的团队"
+            android:textColor="#333333"
+            android:textSize="15sp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="@dimen/px_6"
+            android:layout_height="@dimen/px_12"
+            android:layout_marginEnd="@dimen/px_14"
+            android:src="@drawable/arrow_right"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <View
+        android:id="@+id/viewDividingLine2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_10"
+        android:background="#F7F7F7"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraintLayoutExpert" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutRecommend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/px_14"
+        android:paddingBottom="@dimen/px_14"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewDividingLine2">
+
+        <ImageView
+            android:layout_width="@dimen/px_18"
+            android:layout_height="@dimen/px_18"
+            android:layout_marginStart="@dimen/px_20"
+            android:src="@drawable/recommend"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/px_47"
+            android:text="推荐同行"
+            android:textColor="#333333"
+            android:textSize="15sp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="@dimen/px_6"
+            android:layout_height="@dimen/px_12"
+            android:layout_marginEnd="@dimen/px_14"
+            android:src="@drawable/arrow_right"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutSetting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/px_14"
+        android:paddingBottom="@dimen/px_14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraintLayoutRecommend">
+
+        <ImageView
+            android:layout_width="@dimen/px_18"
+            android:layout_height="@dimen/px_18"
+            android:layout_marginStart="@dimen/px_20"
+            android:src="@drawable/setting"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/px_47"
+            android:text="设置"
+            android:textColor="#333333"
+            android:textSize="15sp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="@dimen/px_6"
+            android:layout_height="@dimen/px_12"
+            android:layout_marginEnd="@dimen/px_14"
+            android:src="@drawable/arrow_right"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/viewDividingLine3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F7F7F7"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraintLayoutSetting" />
+
+</LinearLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/px_16"
+    android:paddingTop="@dimen/px_16"
+    android:paddingRight="@dimen/px_16">
+
+    <TextView
+        android:id="@+id/textName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/buttonAdd"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="#191919"
+        android:textSize="14sp"
+        tools:text="硝苯平缓片（代文）" />
+
+    <TextView
+        android:id="@+id/textSpecification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textName"
+        android:layout_marginTop="@dimen/px_10"
+        android:layout_marginBottom="@dimen/px_20"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="#848484"
+        android:textSize="14sp"
+        tools:text="规格：80mg*8粒/盒" />
+
+    <TextView
+        android:id="@+id/textPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/px_15"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="#191919"
+        android:textSize="15sp"
+        android:visibility="gone"
+        tools:text="¥75.00" />
+
+    <View
+        android:id="@+id/viewLine002"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/fO_grey" />
+
+    <Button
+        android:id="@+id/buttonAdd"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/px_32"
+        android:layout_below="@id/textName"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/px_5"
+        android:background="@drawable/bg_btn_save_origin"
+        android:minWidth="@dimen/px_81"
+        android:paddingStart="@dimen/px_10"
+        android:paddingEnd="@dimen/px_10"
+        android:text="加入处方"
+        android:textColor="#FFFFFF"
+        android:textSize="13sp" />
+
+</RelativeLayout>

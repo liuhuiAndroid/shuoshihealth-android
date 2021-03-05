@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="@dimen/px_288"
+        android:layout_height="@dimen/px_231"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/all_round_dialog"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/img_close"
+            android:layout_width="@dimen/px_14"
+            android:layout_height="@dimen/px_14"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/px_15"
+            android:layout_marginEnd="@dimen/px_15"
+            android:src="@drawable/ic_close_grey" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_29"
+            android:layout_marginBottom="@dimen/px_39"
+            android:gravity="center"
+            android:text="请输入短信验证码"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_58"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="已发送到手机号:"
+                android:textColor="@color/cQi_grey"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/px_5"
+                android:text="17521367389"
+                android:textColor="@color/cQi_grey"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_116"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/px_24"
+                android:text="验证码"
+                android:textColor="@color/yiJiuBlack"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/etCode"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/px_20"
+                android:layout_marginStart="@dimen/px_24"
+                android:background="@null"
+                android:hint="请输入验证码"
+                android:inputType="number"
+                android:maxLength="6"
+                android:minWidth="@dimen/px_100"
+                android:textColor="@color/yiJiuBlack"
+                android:textColorHint="@color/cQi_grey"
+                android:textCursorDrawable="@drawable/my_cursor"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSubmit"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_44"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/px_24"
+            android:layout_marginTop="@dimen/px_14"
+            android:layout_marginEnd="@dimen/px_24"
+            android:layout_marginBottom="@dimen/px_14"
+            android:background="@drawable/change_button"
+            android:enabled="false"
+            android:text="提交认证"
+            android:textColor="@drawable/change_btn_text"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

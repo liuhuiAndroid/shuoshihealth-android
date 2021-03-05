@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fQi_grey"
+    android:orientation="vertical">
+
+    <com.ssh.shuoshi.view.title.UniteTitle
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_42"
+        android:background="@android:color/white"
+        app:titleText="我的专家团队" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_10"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/ImageAvatar"
+                    android:layout_width="@dimen/px_53"
+                    android:layout_height="@dimen/px_53"
+                    android:layout_marginStart="@dimen/px_14"
+                    android:layout_marginTop="@dimen/px_12"
+                    android:layout_marginBottom="@dimen/px_12"
+                    android:src="@drawable/default_img" />
+
+                <TextView
+                    android:id="@+id/textTeamName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/ImageAvatar"
+                    android:layout_alignBottom="@+id/ImageAvatar"
+                    android:layout_marginStart="@dimen/px_10"
+                    android:layout_toEndOf="@+id/ImageAvatar"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:text="张三的妇科团队" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_10"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/px_14"
+                    android:layout_marginTop="@dimen/px_14"
+                    android:text="团队介绍"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/text1"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/px_12"
+                    android:drawableEnd="@drawable/arrow_right"
+                    android:drawablePadding="@dimen/px_5"
+                    android:text="编辑"
+                    android:textColor="@color/baSiGrey"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/textTeamIntroduce"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text1"
+                    android:layout_marginStart="@dimen/px_14"
+                    android:layout_marginTop="@dimen/px_12"
+                    android:layout_marginEnd="@dimen/px_12"
+                    android:layout_marginBottom="@dimen/px_14"
+                    android:ellipsize="end"
+                    android:maxLines="3"
+                    android:text="擅长妇科内分泌疾病、性发育异常、闭经、多囊卵巢 综合征、卵巢早衰、不孕症、擅长妇科内分泌疾病、性发育异常、闭经、多囊卵巢 综合征、卵巢早衰、不孕症、妇科内分泌疾病、性发 育异常、闭经、多囊卵巢综合征、不孕症、子宫肌 ..."
+                    android:textColor="@color/liuLiu_grey"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_10"
+                android:background="@color/white"
+                android:paddingStart="@dimen/px_14"
+                android:paddingEnd="@dimen/px_14">
+
+                <TextView
+                    android:id="@+id/text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px_14"
+                    android:text="团队服务设置"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_tu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/switch_tu"
+                    android:layout_alignBottom="@+id/switch_tu"
+                    android:gravity="center"
+                    android:text="图文问诊"
+                    android:textColor="@color/baSiGrey"
+                    android:textSize="14sp" />
+
+                <Switch
+                    android:id="@+id/switch_tu"
+                    android:layout_width="@dimen/px_44"
+                    android:layout_height="@dimen/px_26"
+                    android:layout_below="@+id/text2"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/px_12"
+                    android:background="@drawable/shape_switch_track_selector"
+                    android:thumb="@null"
+                    android:track="@null"
+                    tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/tv_tu"
+                    android:layout_marginTop="@dimen/px_14"
+                    android:background="@color/line_grey" />
+
+                <TextView
+                    android:id="@+id/tv_price_des"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view1"
+                    android:layout_marginTop="@dimen/px_14"
+                    android:layout_marginBottom="@dimen/px_15"
+                    android:text="价格"
+                    android:textColor="@color/baSiGrey"
+                    android:textSize="14sp" />
+
+
+                <TextView
+                    android:id="@+id/textPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/tv_price_des"
+                    android:layout_alignParentEnd="true"
+                    android:drawableEnd="@drawable/arrow_right"
+                    android:drawablePadding="@dimen/px_5"
+                    android:hint="请设置"
+                    android:textColor="@color/yiJiuBlack"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_10"
+                android:layout_marginBottom="@dimen/px_10"
+                android:background="@color/white"
+                android:paddingStart="@dimen/px_14"
+                android:paddingEnd="@dimen/px_14">
+
+                <TextView
+                    android:id="@+id/text3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px_14"
+                    android:text="团队领衔专家"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/ImageDoctorAvatar"
+                    android:layout_width="@dimen/px_53"
+                    android:layout_height="@dimen/px_53"
+                    android:layout_below="@+id/text3"
+                    android:layout_marginTop="@dimen/px_13"
+                    android:src="@drawable/default_img" />
+
+                <TextView
+                    android:id="@+id/textDoctorName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/ImageDoctorAvatar"
+                    android:layout_marginStart="@dimen/px_10"
+                    android:layout_marginTop="@dimen/px_4"
+                    android:layout_toEndOf="@+id/ImageDoctorAvatar"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    tools:text="王小六" />
+
+                <TextView
+                    android:id="@+id/textOffice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/textDoctorName"
+                    android:layout_alignBottom="@+id/textDoctorName"
+                    android:layout_marginStart="@dimen/px_10"
+                    android:layout_toEndOf="@+id/textDoctorName"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    tools:text="妇科" />
+
+                <TextView
+                    android:id="@+id/textJob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/textOffice"
+                    android:layout_alignBottom="@+id/textOffice"
+                    android:layout_marginStart="@dimen/px_10"
+                    android:layout_toEndOf="@+id/textOffice"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    tools:text="主任医师" />
+
+                <TextView
+                    android:id="@+id/textHospital"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textDoctorName"
+                    android:layout_alignStart="@+id/textDoctorName"
+                    android:layout_marginTop="@dimen/px_7"
+                    android:layout_toEndOf="@+id/textDoctorName"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    tools:text="上海中医药大学附属曙光医院" />
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/ImageDoctorAvatar"
+                    android:layout_marginTop="@dimen/px_14"
+                    android:background="@color/line_grey" />
+
+                <TextView
+                    android:id="@+id/textTeamCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view2"
+                    android:layout_marginTop="@dimen/px_14"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:text="团队其他成员（2人）" />
+
+                <TextView
+                    android:id="@+id/textInvite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/textTeamCount"
+                    android:layout_alignParentEnd="true"
+                    android:drawableRight="@drawable/arrow_right"
+                    android:drawablePadding="@dimen/px_5"
+                    android:text="添加医生"
+                    android:textColor="@color/baSiGrey"
+                    android:textSize="14sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textTeamCount"
+                    android:overScrollMode="never"
+                    android:scrollbars="none" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/llExit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_55"
+                android:background="@android:color/white"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/textExit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="退出专家团队"
+                    android:textColor="@color/orange"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

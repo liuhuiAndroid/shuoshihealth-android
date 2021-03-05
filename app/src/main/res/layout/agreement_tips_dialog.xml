@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent_half"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/px_25"
+        android:layout_marginEnd="@dimen/px_18"
+        android:background="@drawable/all_round_dialog"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_tile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_25"
+            android:gravity="center"
+            android:text="服务协议和隐私政策"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_13"
+            android:paddingLeft="33dp"
+            android:paddingRight="23dp"
+            android:textColor="#FF666666"
+            android:lineSpacingExtra="@dimen/px_3"
+            android:textSize="14sp"
+            tools:text="欢迎您使用悠安医生！\n1. 悠安医生是银川硕世互联网医院官方服务平台，" />
+
+        <Button
+            android:id="@+id/btn_ok"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="@dimen/px_160"
+            android:layout_height="@dimen/px_44"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/px_25"
+            android:background="@drawable/bg_btn_save_origin"
+            android:gravity="center"
+            android:text="同意"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="@dimen/px_160"
+            android:layout_height="@dimen/px_44"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/px_5"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:text="不同意"
+            android:textColor="#FF848484"
+            android:textSize="15sp"
+            android:layout_marginBottom="@dimen/px_5"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

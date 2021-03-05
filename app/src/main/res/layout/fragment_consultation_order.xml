@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_50"
+        android:background="@color/fQi_grey">
+
+        <TextView
+            android:id="@+id/textTime"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/px_14"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            tools:text="2020年12月" />
+
+        <ImageView
+            android:id="@+id/imgArrow"
+            android:layout_width="@dimen/px_16"
+            android:layout_height="@dimen/px_16"
+            android:layout_alignTop="@+id/textTime"
+            android:layout_alignBottom="@+id/textTime"
+            android:layout_marginStart="@dimen/px_3"
+            android:layout_toEndOf="@+id/textTime"
+            android:src="@drawable/down" />
+
+        <TextView
+            android:id="@+id/textAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/px_15"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            tools:text="总计 150.00" />
+
+    </RelativeLayout>
+
+    <com.ssh.shuoshi.library.widget.MyPtrClassicFrameLayout
+        android:id="@+id/ptr_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:ptr_duration_to_close="300"
+        app:ptr_duration_to_close_header="500"
+        app:ptr_keep_header_when_refresh="true"
+        app:ptr_pull_to_fresh="false"
+        app:ptr_ratio_of_header_height_to_refresh="1.0"
+        app:ptr_resistance="1.7">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/order_miss_layout" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:overScrollMode="never" />
+
+        </LinearLayout>
+
+    </com.ssh.shuoshi.library.widget.MyPtrClassicFrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <com.ssh.shuoshi.view.title.UniteTitle
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_42"
+        app:titleText="擅长" />
+
+    <EditText
+        android:id="@+id/et_info"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_306"
+        android:layout_marginStart="@dimen/px_14"
+        android:layout_marginTop="@dimen/px_14"
+        android:layout_marginEnd="@dimen/px_14"
+        android:background="@null"
+        android:gravity="left|top"
+        android:hint="请输入您的擅长领域..."
+        android:maxLength="200"
+        android:textColor="@color/yiJiuBlack"
+        android:textColorHint="@color/jiuJiuBlack"
+        android:textCursorDrawable="@drawable/my_cursor"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/px_14"
+            android:gravity="right"
+            android:text="还可输入200字"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="@dimen/px_14"
+            android:background="@color/line_grey" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/px_22"
+        android:layout_marginTop="@dimen/px_14"
+        android:layout_marginEnd="@dimen/px_22"
+        android:layout_marginBottom="@dimen/px_14"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_save"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_44"
+            android:background="@drawable/bg_btn_save_origin"
+            android:text="保存"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+</LinearLayout>

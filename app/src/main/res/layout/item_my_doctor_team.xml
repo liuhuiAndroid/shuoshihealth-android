@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/px_13"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/ImageDoctorAvatar"
+        android:layout_width="@dimen/px_53"
+        android:layout_height="@dimen/px_53"
+        android:src="@drawable/default_img" />
+
+    <TextView
+        android:id="@+id/textDoctorName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/ImageDoctorAvatar"
+        android:layout_marginStart="@dimen/px_10"
+        android:layout_marginTop="@dimen/px_4"
+        android:layout_toEndOf="@+id/ImageDoctorAvatar"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        tools:text="王小六" />
+
+    <TextView
+        android:id="@+id/textOffice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textDoctorName"
+        android:layout_alignBottom="@+id/textDoctorName"
+        android:layout_marginStart="@dimen/px_10"
+        android:layout_toEndOf="@+id/textDoctorName"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        tools:text="妇科" />
+
+    <TextView
+        android:id="@+id/textJob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textOffice"
+        android:layout_alignBottom="@+id/textOffice"
+        android:layout_marginStart="@dimen/px_10"
+        android:layout_toEndOf="@+id/textOffice"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        tools:text="主任医师" />
+
+    <TextView
+        android:id="@+id/textHospital"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textDoctorName"
+        android:layout_alignStart="@+id/textDoctorName"
+        android:layout_marginTop="@dimen/px_7"
+        android:layout_toEndOf="@+id/textDoctorName"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        tools:text="上海中医药大学附属曙光医院" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/ImageDoctorAvatar"
+        android:layout_marginTop="@dimen/px_13"
+        android:background="@color/line_grey" />
+
+</RelativeLayout>

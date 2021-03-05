@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <com.ssh.shuoshi.view.title.UniteTitle
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_42"
+        app:titleText="接诊时间设置" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/px_14"
+        android:layout_marginTop="@dimen/px_14"
+        android:layout_marginEnd="@dimen/px_12"
+        android:layout_marginBottom="@dimen/px_14"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_pre"
+                android:layout_width="@dimen/px_20"
+                android:layout_height="@dimen/px_20"
+                android:layout_alignTop="@+id/tv_time"
+                android:layout_alignBottom="@+id/tv_time"
+                android:src="@drawable/time_left" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="2020"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/img_next"
+                android:layout_width="@dimen/px_20"
+                android:layout_height="@dimen/px_20"
+                android:layout_alignTop="@+id/tv_time"
+                android:layout_alignBottom="@+id/tv_time"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/time_right" />
+
+        </RelativeLayout>
+
+        <com.haibin.calendarview.CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_14"
+            android:background="#fff"
+            app:calendar_height="@dimen/px_40"
+            app:current_day_text_color="#191919"
+            app:current_month_text_color="#191919"
+            app:day_text_size="14sp"
+            app:max_year="2049"
+            app:min_year="2010"
+            app:month_view="com.ssh.shuoshi.view.calendar.SimpleMonthView"
+            app:month_view_show_mode="mode_fix"
+            app:selected_text_color="#fff"
+            app:selected_theme_color="#FF824D"
+            app:week_background="#fff"
+            app:week_start_with="mon"
+            app:week_text_color="#999999"
+            app:week_text_size="14sp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_10"
+        android:background="@color/fQi_grey" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/px_14"
+            android:layout_marginEnd="@dimen/px_14"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_16">
+
+                <TextView
+                    android:id="@+id/tv_week"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="周次："
+                    android:textColor="@color/yiJiuBlack"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/tv_week"
+                    android:text="12月7日-12月13日"
+                    android:textColor="@color/yiJiuBlack"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="编辑"
+                    android:textColor="@color/orange"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never"
+                android:scrollbars="none"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_hint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_56"
+                android:gravity="center"
+                android:text="暂未设置接诊时间"
+                android:textColor="@color/jiuJiuBlack"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/line_grey" />
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/px_22"
+        android:layout_marginTop="@dimen/px_20"
+        android:layout_marginEnd="@dimen/px_22"
+        android:layout_marginBottom="@dimen/px_20"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_copy"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/px_44"
+            android:layout_marginEnd="@dimen/px_5"
+            android:layout_weight="1"
+            android:background="@drawable/change_button"
+            android:enabled="false"
+            android:text="复制上周排班"
+            android:textColor="@drawable/change_btn_text"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/btn_add"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/px_44"
+            android:layout_marginStart="@dimen/px_5"
+            android:layout_weight="1"
+            android:background="@drawable/change_button"
+            android:text="添加接诊时间"
+            android:textColor="@drawable/change_btn_text"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

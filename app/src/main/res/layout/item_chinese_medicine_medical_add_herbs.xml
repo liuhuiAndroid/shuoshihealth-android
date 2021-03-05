@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mContainer"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/px_5">
+
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/px_30"
+        android:background="@drawable/bg_btn_save_gray"
+        android:paddingLeft="@dimen/px_15"
+        android:paddingRight="@dimen/px_15"
+        android:gravity="center"
+        android:text="使用处方"
+        android:textColor="#333333" />
+
+</RelativeLayout>

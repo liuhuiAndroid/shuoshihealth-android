@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/ImageDoctorAvatar"
+        android:layout_width="@dimen/px_48"
+        android:layout_height="@dimen/px_48"
+        android:layout_marginTop="@dimen/px_14"
+        android:src="@drawable/default_img" />
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/ImageDoctorAvatar"
+        android:layout_alignBottom="@+id/ImageDoctorAvatar"
+        android:layout_toEndOf="@+id/ImageDoctorAvatar"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/textDoctorName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/px_10"
+            android:layout_marginTop="@dimen/px_4"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="王小六王小六" />
+
+        <TextView
+            android:id="@+id/textOffice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textDoctorName"
+            android:layout_alignBottom="@+id/textDoctorName"
+            android:layout_marginStart="@dimen/px_14"
+            android:layout_toEndOf="@+id/textDoctorName"
+            android:gravity="center"
+            android:textColor="#333333"
+            android:textSize="14sp"
+            tools:text="妇科" />
+
+        <TextView
+            android:id="@+id/textJob"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textOffice"
+            android:layout_alignBottom="@+id/textOffice"
+            android:layout_marginStart="@dimen/px_5"
+            android:layout_toEndOf="@+id/textOffice"
+            android:gravity="center"
+            android:textColor="#333333"
+            android:textSize="14sp"
+            tools:text="主任医师" />
+
+        <Button
+            android:id="@+id/buttonAdd"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="@dimen/px_77"
+            android:layout_height="@dimen/px_32"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/bg_btn_save_origin"
+            android:text="加入团队"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/textHospital"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textDoctorName"
+            android:layout_alignStart="@+id/textDoctorName"
+            android:layout_marginTop="@dimen/px_3"
+            android:layout_toEndOf="@+id/textDoctorName"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            tools:text="上海中医药大学附属曙光医院" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ImageDoctorAvatar"
+        android:layout_alignStart="@+id/rl_top"
+        android:layout_marginStart="@dimen/px_10"
+        android:layout_marginTop="@dimen/px_10"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/baSiGrey"
+        android:textSize="13sp"
+        tools:text="擅长：甲状腺五年，激素目前正常，没有用药，想咨询尊医生是否可以自己调理下糖…" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/textDesc"
+        android:layout_marginTop="@dimen/px_18"
+        android:background="@color/line_grey" />
+
+</RelativeLayout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent_half"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="@dimen/px_331"
+        android:layout_height="@dimen/px_443"
+        android:background="@drawable/all_round_dialog">
+
+
+        <ImageView
+            android:id="@+id/imgClose"
+            android:layout_width="@dimen/px_14"
+            android:layout_height="@dimen/px_14"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/px_15"
+            android:layout_marginEnd="@dimen/px_15"
+            android:src="@drawable/wrong_grey" />
+
+        <TextView
+            android:id="@+id/textOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_19"
+            android:gravity="center"
+            android:text="执业证书拍摄要求"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/imgOne"
+            android:layout_width="@dimen/px_288"
+            android:layout_height="@dimen/px_192"
+            android:layout_below="@+id/textOne"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/px_16"
+            android:src="@drawable/zhiye_one" />
+
+        <TextView
+            android:id="@+id/textTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgOne"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/px_10"
+            android:text="注意：照片中需包含姓名、证书编码、执业地点等"
+            android:textColor="@color/baSiGrey"
+            android:textSize="@dimen/px_13" />
+
+        <RelativeLayout
+            android:layout_width="@dimen/px_288"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textTwo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/px_19">
+
+            <ImageView
+                android:id="@+id/imgTwo"
+                android:layout_width="@dimen/px_139"
+                android:layout_height="@dimen/px_93"
+                android:src="@drawable/zhiye_one" />
+
+            <TextView
+                android:id="@+id/textThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgTwo"
+                android:layout_marginStart="@dimen/px_45"
+                android:layout_marginTop="@dimen/px_10"
+                android:text="缺边"
+                android:textColor="@color/baSiGrey"
+                android:textSize="@dimen/px_13" />
+
+            <ImageView
+                android:layout_width="@dimen/px_10"
+                android:layout_height="@dimen/px_10"
+                android:layout_alignTop="@+id/textThree"
+                android:layout_alignBottom="@+id/textThree"
+                android:layout_marginStart="@dimen/px_5"
+                android:layout_toEndOf="@+id/textThree"
+                android:src="@drawable/wrong_red" />
+
+            <ImageView
+                android:id="@+id/imgThree"
+                android:layout_width="@dimen/px_139"
+                android:layout_height="@dimen/px_93"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/zhiye_one" />
+
+            <TextView
+                android:id="@+id/textFour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgThree"
+                android:layout_marginStart="@dimen/px_194"
+                android:layout_marginTop="@dimen/px_10"
+                android:text="模糊"
+                android:textColor="@color/baSiGrey"
+                android:textSize="@dimen/px_13" />
+
+            <ImageView
+                android:layout_width="@dimen/px_10"
+                android:layout_height="@dimen/px_10"
+                android:layout_alignTop="@+id/textThree"
+                android:layout_alignBottom="@+id/textThree"
+                android:layout_marginStart="@dimen/px_5"
+                android:layout_toEndOf="@+id/textFour"
+                android:src="@drawable/wrong_red" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</RelativeLayout>

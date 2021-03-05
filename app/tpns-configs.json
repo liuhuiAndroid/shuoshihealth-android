@@ -1,0 +1,14 @@
+{
+    "tpns": {
+        "access_id": "1580002890",
+        "access_key": "AKCYZRHJ9CLK"
+    },
+    "com.ssh.shuoshi": {
+        "channel": {
+            "enable": true
+        }
+    },
+    "upgrade": false,
+    "debug": false,
+    "version": "1.2.2.0"
+}

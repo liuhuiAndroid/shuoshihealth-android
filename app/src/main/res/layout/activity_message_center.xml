@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fQi_grey"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_42"
+        android:background="@color/colorWhite">
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="@dimen/px_18"
+            android:layout_height="@dimen/px_18"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/px_14"
+            android:src="@drawable/arrow_left" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/px_14"
+            android:text="消息中心"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tvRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/px_14"
+            android:text="编辑"
+            android:textColor="@color/yiJiuBlack"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+
+    <com.ssh.shuoshi.library.widget.MyPtrClassicFrameLayout
+        android:id="@+id/ptr_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="1px"
+        android:layout_weight="1"
+        app:ptr_duration_to_close="300"
+        app:ptr_duration_to_close_header="500"
+        app:ptr_keep_header_when_refresh="true"
+        app:ptr_pull_to_fresh="false"
+        app:ptr_ratio_of_header_height_to_refresh="1.0"
+        app:ptr_resistance="1.7">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/px_14"
+                android:layout_marginTop="@dimen/px_10"
+                android:layout_marginEnd="@dimen/px_14"
+                android:overScrollMode="never"
+                android:scrollbars="none" />
+
+        </LinearLayout>
+
+    </com.ssh.shuoshi.library.widget.MyPtrClassicFrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlAllChoose"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_60"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <CheckBox
+            android:id="@+id/cbAllChoose"
+            style="@style/CustomCheckboxTheme"
+            android:layout_width="@dimen/px_19"
+            android:layout_height="@dimen/px_19"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/px_14" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/px_5"
+            android:layout_toEndOf="@+id/cbAllChoose"
+            android:text="全选"
+            android:textColor="@color/liuLiu_grey"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/buttonDelete"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/px_34"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/px_15"
+            android:background="@drawable/bg_btn_save_origin"
+            android:text="删除"
+            android:textColor="#FFFFFF" />
+
+    </RelativeLayout>
+
+</LinearLayout>

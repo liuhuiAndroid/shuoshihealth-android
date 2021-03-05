@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/px_10"
+    android:background="@drawable/all_white_round"
+    android:paddingEnd="@dimen/px_14">
+
+    <CheckBox
+        android:id="@+id/cbChoose"
+        style="@style/CustomCheckboxTheme"
+        android:layout_width="@dimen/px_19"
+        android:layout_height="@dimen/px_19"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/px_14"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/px_29"
+        android:layout_height="@dimen/px_29"
+        android:layout_marginStart="@dimen/px_14"
+        android:layout_marginTop="@dimen/px_14"
+        android:layout_toEndOf="@+id/cbChoose"
+        android:src="@drawable/remind" />
+
+    <TextView
+        android:id="@+id/textName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_marginStart="@dimen/px_10"
+        android:layout_toEndOf="@+id/imageView"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="#191919"
+        android:textSize="16sp"
+        tools:text="设置随访提醒" />
+
+    <TextView
+        android:id="@+id/tvType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textName"
+        android:layout_alignBottom="@+id/textName"
+        android:layout_marginStart="@dimen/px_10"
+        android:layout_toEndOf="@+id/textName"
+        android:background="#1AFF824D"
+        android:gravity="center"
+        android:paddingStart="@dimen/px_5"
+        android:paddingEnd="@dimen/px_5"
+        android:textColor="@color/orange"
+        android:textSize="12sp"
+        tools:text="未设置" />
+
+    <TextView
+        android:id="@+id/textMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textName"
+        android:layout_alignStart="@+id/textName"
+        android:layout_marginTop="@dimen/px_8"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="#848484"
+        android:textSize="14sp"
+        tools:text="患者张三三丰已购药，您可设置患者下次 的随访时间。" />
+
+    <TextView
+        android:id="@+id/textTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textMessage"
+        android:layout_alignStart="@+id/textName"
+        android:layout_marginTop="@dimen/px_9"
+        android:layout_marginBottom="@dimen/px_14"
+        android:textColor="#B9B9B9"
+        android:textSize="13sp"
+        tools:text="2020.11.10 02:00" />
+
+
+    <TextView
+        android:id="@+id/textSetting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textTime"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="@dimen/px_14"
+        android:textColor="#C48257"
+        android:textSize="13sp"
+        tools:text="设置随访时间" />
+
+
+</RelativeLayout>

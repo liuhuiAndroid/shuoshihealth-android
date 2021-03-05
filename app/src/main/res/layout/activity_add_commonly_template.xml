@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <com.ssh.shuoshi.view.title.UniteTitle
+        android:id="@+id/uniteTitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_42"
+        app:titleText="新增常用处方" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#F7F7F7"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bg_round_white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/px_14"
+                    android:layout_marginTop="@dimen/px_14"
+                    android:text="模版名称"
+                    android:textColor="#848484"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/editTextResult"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px_48"
+                    android:layout_below="@+id/text1"
+                    android:layout_marginStart="@dimen/px_14"
+                    android:layout_marginTop="@dimen/px_9"
+                    android:layout_marginEnd="@dimen/px_14"
+                    android:layout_marginBottom="@dimen/px_14"
+                    android:background="#F7F7F7"
+                    android:hint="请输入模版名称"
+                    android:maxLength="50"
+                    android:paddingLeft="@dimen/px_14"
+                    android:paddingRight="@dimen/px_14"
+                    android:textColor="@color/yiJiuBlack"
+                    android:textColorHint="#C3C3C3"
+                    android:textCursorDrawable="@drawable/my_cursor"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/bg_round_white"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textViewPatientTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/px_14"
+                        android:layout_marginTop="@dimen/px_14"
+                        android:layout_marginBottom="@dimen/px_14"
+                        android:text="Rp."
+                        android:textColor="#000000"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/px_16"
+                        android:layout_marginRight="@dimen/px_16"
+                        android:overScrollMode="never"
+                        android:scrollbars="none"
+                        android:visibility="visible" />
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayoutAddDrugs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/px_14"
+                            android:layout_marginBottom="@dimen/px_17"
+                            android:drawableLeft="@drawable/add"
+                            android:drawablePadding="7dp"
+                            android:text="新增药品"
+                            android:textColor="#668CFF"
+                            android:textSize="14sp" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/buttonSave"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_44"
+        android:layout_marginStart="@dimen/px_22"
+        android:layout_marginTop="@dimen/px_14"
+        android:layout_marginEnd="@dimen/px_22"
+        android:layout_marginBottom="@dimen/px_14"
+        android:background="@drawable/bg_btn_save_origin"
+        android:text="保存"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp" />
+
+</LinearLayout>

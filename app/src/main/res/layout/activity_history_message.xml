@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlHead"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_42"
+        android:background="@color/colorWhite">
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="@dimen/px_18"
+            android:layout_height="@dimen/px_18"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/px_14"
+            android:src="@drawable/arrow_left" />
+
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/px_14"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            tools:text="患者名字" />
+
+        <ImageView
+            android:id="@+id/imgPull"
+            android:layout_width="@dimen/px_11"
+            android:layout_height="@dimen/px_11"
+            android:layout_alignTop="@+id/textTitle"
+            android:layout_alignBottom="@+id/textTitle"
+            android:layout_marginStart="@dimen/px_5"
+            android:layout_toEndOf="@+id/textTitle"
+            android:src="@drawable/pull_down"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+
+    <com.ssh.shuoshi.library.widget.MyPtrClassicFrameLayout
+        android:id="@+id/ptr_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlHead"
+        android:layout_marginTop="1px"
+        app:ptr_duration_to_close="300"
+        app:ptr_duration_to_close_header="500"
+        app:ptr_keep_header_when_refresh="true"
+        app:ptr_pull_to_fresh="false"
+        app:ptr_ratio_of_header_height_to_refresh="1.0"
+        app:ptr_resistance="1.7">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFF7F7F7"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+
+    </com.ssh.shuoshi.library.widget.MyPtrClassicFrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlTeam"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/px_42"
+        android:background="@color/transparent_half"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/textTeamName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingStart="@dimen/px_15"
+            android:paddingTop="@dimen/px_14"
+            android:text="李丽妇科专家团队（5人）"
+            android:textColor="@color/yiJiuBlack"
+            android:textSize="14sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewTeam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textTeamName"
+            android:background="@color/white"
+            android:overScrollMode="never"
+            android:paddingBottom="@dimen/px_10"
+            android:scrollbars="none" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

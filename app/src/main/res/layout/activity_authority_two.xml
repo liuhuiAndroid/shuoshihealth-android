@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <com.ssh.shuoshi.view.title.UniteTitle
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_42"
+        app:titleText="资质认证" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px_24"
+        android:layout_marginBottom="@dimen/px_19"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="@dimen/px_240"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/image1"
+                android:layout_width="@dimen/px_16"
+                android:layout_height="@dimen/px_16"
+                android:src="@drawable/orange_circle" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/orange" />
+
+            <ImageView
+                android:id="@+id/image2"
+                android:layout_width="@dimen/px_16"
+                android:layout_height="@dimen/px_16"
+                android:src="@drawable/orange_circle" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/eLiuGrey" />
+
+            <ImageView
+                android:id="@+id/image3"
+                android:layout_width="@dimen/px_16"
+                android:layout_height="@dimen/px_16"
+                android:src="@drawable/grey_circle" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/px_294"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/px_8"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="1.基本信息"
+                android:textColor="@color/yiJiuBlack"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2.执照信息"
+                android:textColor="@color/orange"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="3.提交审核"
+                android:textColor="@color/cc_grey"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_10"
+        android:background="@color/fQi_grey" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_43"
+        android:background="@color/bg_orange">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/px_14"
+            android:text="以下信息仅做认证使用，不公开展示"
+            android:textColor="@color/yiJiuBlack"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/px_14"
+            android:layout_marginEnd="@dimen/px_14"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_19"
+                android:text="上传身份证正反面照片"
+                android:textColor="@color/yiJiuBlack"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_178"
+                android:layout_marginTop="@dimen/px_14"
+                android:background="@drawable/round_grey"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/img_idf"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
+                    android:id="@+id/img_add_idf"
+                    android:layout_width="@dimen/px_58"
+                    android:layout_height="@dimen/px_58"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/px_46"
+                    android:src="@drawable/bg_camera" />
+
+                <TextView
+                    android:id="@+id/tv_hint_idf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/px_113"
+                    android:text="上传身份证人像面"
+                    android:textColor="@color/baSiGrey"
+                    android:textSize="@dimen/px_13" />
+
+                <TextView
+                    android:id="@+id/tv_idf_upload"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px_47"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/round_half_black"
+                    android:gravity="center"
+                    android:text="重新上传"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_178"
+                android:layout_marginTop="@dimen/px_10"
+                android:background="@drawable/round_grey"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/img_idb"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
+                    android:id="@+id/img_add_idb"
+                    android:layout_width="@dimen/px_58"
+                    android:layout_height="@dimen/px_58"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/px_46"
+                    android:src="@drawable/bg_camera" />
+
+                <TextView
+                    android:id="@+id/tv_hint_idb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/px_113"
+                    android:text="上传身份证国徽面"
+                    android:textColor="@color/baSiGrey"
+                    android:textSize="@dimen/px_13" />
+
+                <TextView
+                    android:id="@+id/tv_idb_upload"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px_47"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/round_half_black"
+                    android:gravity="center"
+                    android:text="重新上传"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_24"
+                android:text="上传医师执业证书"
+                android:textColor="@color/yiJiuBlack"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_178"
+                android:layout_marginTop="@dimen/px_14"
+                android:background="@drawable/round_grey">
+
+
+                <ImageView
+                    android:id="@+id/img_doctorP"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
+                    android:id="@+id/img_add_doctorP"
+                    android:layout_width="@dimen/px_58"
+                    android:layout_height="@dimen/px_58"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/px_46"
+                    android:src="@drawable/bg_camera" />
+
+                <TextView
+                    android:id="@+id/tv_hint_doctorP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/px_113"
+                    android:text="上传医师执业证书"
+                    android:textColor="@color/baSiGrey"
+                    android:textSize="@dimen/px_13" />
+
+                <TextView
+                    android:id="@+id/tv_doctorP_upload"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px_47"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/round_half_black"
+                    android:gravity="center"
+                    android:text="重新上传"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/imageDoctorP"
+                    android:layout_width="@dimen/px_43"
+                    android:layout_height="@dimen/px_43"
+                    android:src="@drawable/example" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_24"
+                android:text="上传医师资格证书"
+                android:textColor="@color/yiJiuBlack"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_178"
+                android:layout_marginTop="@dimen/px_14"
+                android:background="@drawable/round_grey">
+
+                <ImageView
+                    android:id="@+id/img_doctorZ"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
+                    android:id="@+id/img_add_doctorZ"
+                    android:layout_width="@dimen/px_58"
+                    android:layout_height="@dimen/px_58"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/px_46"
+                    android:src="@drawable/bg_camera" />
+
+                <TextView
+                    android:id="@+id/tv_hint_doctorZ"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/px_113"
+                    android:text="上传医师资格证书"
+                    android:textColor="@color/baSiGrey"
+                    android:textSize="@dimen/px_13" />
+
+                <TextView
+                    android:id="@+id/tv_doctorZ_upload"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px_47"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/round_half_black"
+                    android:gravity="center"
+                    android:text="重新上传"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/imageDoctorZ"
+                    android:layout_width="@dimen/px_43"
+                    android:layout_height="@dimen/px_43"
+                    android:src="@drawable/example" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_24"
+                android:text="上传职称证书"
+                android:textColor="@color/yiJiuBlack"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_178"
+                android:layout_marginTop="@dimen/px_14"
+                android:layout_marginBottom="@dimen/px_20"
+                android:background="@drawable/round_grey">
+
+
+                <ImageView
+                    android:id="@+id/img_doctorT"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
+                    android:id="@+id/img_add_doctorT"
+                    android:layout_width="@dimen/px_58"
+                    android:layout_height="@dimen/px_58"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/px_46"
+                    android:src="@drawable/bg_camera" />
+
+                <TextView
+                    android:id="@+id/tv_hint_doctorT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/px_113"
+                    android:text="上传职称证书"
+                    android:textColor="@color/baSiGrey"
+                    android:textSize="@dimen/px_13" />
+
+                <TextView
+                    android:id="@+id/tv_doctorT_upload"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px_47"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/round_half_black"
+                    android:gravity="center"
+                    android:text="重新上传"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/imageDoctorT"
+                    android:layout_width="@dimen/px_43"
+                    android:layout_height="@dimen/px_43"
+                    android:src="@drawable/example" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/px_22"
+                android:layout_marginTop="@dimen/px_14"
+                android:layout_marginEnd="@dimen/px_22"
+                android:layout_marginBottom="@dimen/px_14"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px_10"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_agree"
+                        style="@style/CustomCheckboxTheme"
+                        android:layout_width="@dimen/px_16"
+                        android:layout_height="@dimen/px_16"
+                        android:layout_marginTop="@dimen/px_1" />
+
+                    <TextView
+                        android:id="@+id/tv_agree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:text="我已同意并阅读"
+                        android:textColor="#c6c6c6" />
+
+                    <TextView
+                        android:id="@+id/tv_law"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="《悠安医生工作室服务协议》"
+                        android:textColor="@color/orange" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_next"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px_44"
+                    android:layout_marginTop="@dimen/px_30"
+                    android:background="@drawable/bg_btn_save_origin"
+                    android:text="下一步"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
