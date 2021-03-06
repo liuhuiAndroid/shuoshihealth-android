@@ -130,16 +130,16 @@ public class CommonlyDrugsActivity extends BaseActivity implements CommonlyDrugs
 
                     if (mType.equals("template")) {
                         btnAdd.setText("加入常用处方");
-                        btnAdd.setClickable(true);
+                        btnAdd.setEnabled(true);
                         btnAdd.setBackground(getResources().getDrawable(R.drawable.bg_btn_save_origin));
                     } else {
                         if (bean.getSurplusUsableStock() <= 0) {
                             btnAdd.setText("库存不足");
-                            btnAdd.setClickable(false);
+                            btnAdd.setEnabled(false);
                             btnAdd.setBackground(getResources().getDrawable(R.drawable.bg_btn_save_gray));
                         } else {
                             btnAdd.setText("加入处方");
-                            btnAdd.setClickable(true);
+                            btnAdd.setEnabled(true);
                             btnAdd.setBackground(getResources().getDrawable(R.drawable.bg_btn_save_origin));
                         }
                     }

@@ -11,7 +11,7 @@ android {
         applicationId "com.ssh.shuoshi"
         minSdkVersion 19
         targetSdkVersion 29
-        versionCode 105
+        versionCode 106
         versionName "1.0.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
